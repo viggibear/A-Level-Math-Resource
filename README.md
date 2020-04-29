@@ -4,6 +4,6 @@ Welcome to an A-Level Math Resource created by @viggibear and @. We hope that it
 
 The PDFs can be found [here](https://github.com/viggibear/A-Level-Math-Resource/tree/master/PDFs).
 
-Do start your own pull-requests if you would like to add your own questions. Please follow the format!
+Do look at the [source documents](https://github.com/viggibear/A-Level-Math-Resource/tree/master/Source-Code) if you wish to contribute!
 
 Thanks and happy practising.
