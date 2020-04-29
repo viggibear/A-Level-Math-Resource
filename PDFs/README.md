@@ -13,6 +13,6 @@ So far, we have questions for these topics, with more to come:
 If there are any amendments to be made, do submit a pull-request or raise an issue so that we can rectify it.
 
 ## Other links
-*Link to formula sheet [MF 26](https://www.seab.gov.sg/content/syllabus/alevel/2017Syllabus/ListMF26.pdf)
-*[Integral](https://www.integral-calculator.com/) and [Derivative](https://www.derivative-calculator.net/) calculators
-*[Graphing](https://www.desmos.com/calculator) Utility (Desmos)
+* Link to formula sheet [MF 26](https://www.seab.gov.sg/content/syllabus/alevel/2017Syllabus/ListMF26.pdf)
+* [Integral](https://www.integral-calculator.com/) and [Derivative](https://www.derivative-calculator.net/) calculators
+* [Graphing](https://www.desmos.com/calculator) Utility (Desmos)
