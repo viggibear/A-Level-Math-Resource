@@ -60,3 +60,5 @@ Here are more technical caveats:
   e %vs% \mathrm{e} % Throughout this project euler's number has been represented as \mathrm{e} instead of e so we'd like to keep it consistent!
 \end{DOSnDONTS}
 ```
+
+After finishing your code, please beautify it using ```latexindent.pl``` before committing.
