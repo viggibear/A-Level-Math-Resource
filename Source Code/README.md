@@ -55,8 +55,8 @@ Please make your answers as detailed as possible, with a good explanation preced
 Here are more technical caveats:
 ```latex
 \begin{DOSnDONTS}
-  \int x^2 dx %vs \int x^2 \mathrm{d}x % To make sure that 'dx, dy, dz' etc. are rendered properly, please use \mathrm{d}x
-  f(x) %vs \mathrm{f}(x) % To make sure that 'f(x), g(x)' etc. are rendered properly, please use \mathrm{f}(x)
-  e %vs \mathrm{e} % Throughout this project euler's number has been represented as \mathrm{e} instead of e so we'd like to keep it consistent!
+  \int x^2 dx %vs% \int x^2 \mathrm{d}x % To make sure that 'dx, dy, dz' etc. are rendered properly, please use \mathrm{d}x
+  f(x) %vs% \mathrm{f}(x) % To make sure that 'f(x), g(x)' etc. are rendered properly, please use \mathrm{f}(x)
+  e %vs% \mathrm{e} % Throughout this project euler's number has been represented as \mathrm{e} instead of e so we'd like to keep it consistent!
 \end{DOSnDONTS}
 ```
