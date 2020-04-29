@@ -1,0 +1,669 @@
+\documentclass[12pt, a4 paper]{article}
+% Set target color model to RGB
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{outlines}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb,tkz-linknodes}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=\textbf{\arabic*}}
+\setlist[enumerate,2]{label=\textbf{\alph*})}
+\setlist[enumerate,3]{label=\textbf{\roman*})}
+\setlist{nosep}
+\linespread{1.6}
+%\usetikzlibrary{through,backgrounds}
+\hypersetup{%
+pdfauthor={Vignesh Ravibaskar},%
+pdfcreator={PDFLaTeX},%
+pdfproducer={PDFLaTeX},%
+}
+
+\title{Vectors}
+\author{Derek, Vignesh}
+\date{2020}
+
+%\usepackage{tgtermes}
+
+\begin{document}
+
+\maketitle
+\textbf{VECTORS [150 Marks]}
+\begin{outline}[enumerate]
+	\1 Solve the following:
+	\2 $\overrightarrow {OA}  = {\bf{a}}$ and $\overrightarrow {OB}  = {\bf{b}}$, where $O$ is the origin. Given that lines $OA$ and $OB$ are parallel, $\left| {\bf{a}} \right| = 2$ and ${\bf{a}} \cdot {\bf{b}} =  - 2$, express $\bf{b}$ in terms of $\bf{a}$.\hfill[2]
+	\color{blue}
+	\begin{align*}
+		\textrm{Let } {\bf{b}} = k{\bf{a}}\;{\textrm{for some }}k \in \mathbb{R}            \\
+		{\bf{a}} \cdot {\bf{b}} = {\bf{a}} \cdot (k{\bf{a}}) = k{\left| {\bf{a}} \right|^2} \\
+		- 2 = k{(2)^2} \Rightarrow k =  - \frac{1}{2}                                       \\
+		\therefore {\bf{b = }} - \frac{1}{2}{\bf{a}}                                        
+	\end{align*}
+							        
+	\color{black}
+	\2 A vector \textbf{a} is such that ${\bf{a}} = (\sqrt 2 \cos \alpha ){\bf{i}} - (\cos \alpha ){\bf{j}} + (\sqrt 2 \sin \alpha ){\bf{k}}$, where $0 \le \alpha  \le 2\pi $ and $\left| {\bf{a}} \right| = \sqrt 2 $. Find the value(s) of $\alpha $.\hfill[2]
+	\color{blue}
+	\begin{align*}
+		\left| {\bf{a}} \right| & = \sqrt {2{{\cos }^2}\alpha  + {{\cos }^2}\alpha  + 2{{\sin }^2}\alpha } \\
+		\sqrt 2                 & = \sqrt {2 - {{\cos }^2}\alpha }                                         \\
+		2                       & = 2 - {\cos ^2}\alpha                                                    \\
+		\cos \alpha             & = 0                                                                      \\
+		\alpha                  & = 0\;{\textrm{or }}2\pi                                                  
+	\end{align*}
+							        
+	\color{black}
+	\2 The points $A, B$ and $C$ with respect to the origin are represented by the vectors ${\bf{a}}$, ${\bf{b}}$ and ${\bf{c}}$ respectively. It is given that $\left| {\bf{b}} \right| = 2$, ${\bf{a}} \cdot {\bf{b}} = k$ and ${\bf{b}} \cdot {\bf{c}} = 2$. Given further that point $C$ divides the line $AB$ such that $AC:CB = 2:1$, find $k$.\hfill[3]
+	\color{blue}
+	\begin{align*}
+		{\bf{c}}                & = \frac{{{\bf{a}} + 2{\bf{b}}}}{3}                                    \\
+		{\bf{b}} \cdot {\bf{c}} & = {\bf{b}} \cdot \left( {\frac{{{\bf{a}} + 2{\bf{b}}}}{3}} \right)    \\
+		2                       & = \frac{1}{3}({\bf{b}} \cdot {\bf{a}} + 2{\left| {\bf{b}} \right|^2}) \\
+		2                       & = \frac{1}{3}(k + 8)                                                  \\
+		\therefore k            & =  - 2                                                                
+	\end{align*}
+							        
+	\color{black}
+	\2 Four vectors \textbf{a}, \textbf{b}, \textbf{c} and \textbf{d} exist such that ${\bf{a}} + {\bf{b}} + {\bf{c}} + {\bf{d}} = {\bf{0}}$. Show that ${\bf{b}} \times ({\bf{a}} + {\bf{c}}) = {\bf{d}} \times {\bf{b}}$.\hfill[2]
+	\color{blue}
+	\begin{align*}
+		{\bf{b}} \times ({\bf{a}} + {\bf{c}}) & = {\bf{b}} \times ( - {\bf{b}} - {\bf{d}})                 \\
+		                                      & = {\bf{b}} \times ( - {\bf{b}}) - {\bf{b}} \times {\bf{d}} \\
+		                                      & = {\bf{d}} \times {\bf{b}}                                 
+	\end{align*}
+	\color{black}
+	\2 Point $A$ referred from the origin has vector ${\bf{a}} = {\bf{i}} + 2{\bf{j}} - 2{\bf{k}}$. The line $OA$ makes an angle of $\alpha $ with the $y$-axis and $\beta $ with the $z$-axis, where $\alpha ,\beta  < \pi $. Show that $\alpha  + \beta  = \pi $.\hfill[3]
+	\color{blue}
+	\begin{align*}
+		\cos \alpha                  & = \frac{{\left( {\begin{array}{*{20}{c}}0               \\1\\0\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\2\\{ - 2}\end{array}} \right)}}{{(1)\sqrt {{1^2} + {2^2} + {2^2}} }} = \frac{2}{3} \\
+		\cos \beta                   & = \frac{{\left( {\begin{array}{*{20}{c}}0               \\0\\1\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\2\\{ - 2}\end{array}} \right)}}{{(1)(3)}} =  - \frac{2}{3} \\
+		{\textrm{Since }}\cos \alpha & =  - \cos \beta ,{\textrm{ and }}\alpha ,\beta  < \pi , \\
+		\cos \alpha                  & = \cos (\pi  - \beta )                                  \\
+		\alpha                       & = \pi  - \beta                                          \\
+		\alpha  + \beta              & = \pi                                                   
+	\end{align*}
+			
+					
+	\1 Referred to the origin $O$, points $A$ and $B$ have position vectors given by ${\bf{a}}$ and ${\bf{b}}$ respectively. ${C_0}$ is the foot of perpendicular from $A$ to $OB$ with position vector ${{\bf{c}}_0}$. The angle between lines $OA$ and $OB$ is $\alpha$ , where $ 0< \alpha  < \dfrac{\pi}{2}$.
+							    
+	\2 By considering $\cos{\alpha}$, show that $|{\bf{c}}_0|= {\bf{a}} \cdot {\bf{\hat b}}$.\hfill[2]
+	\color{blue}
+	\begin{align*}
+		\cos \alpha  = \dfrac{{\left| {{{\bf{c}}_0}} \right|}}{{\left| {\bf{a}} \right|}} 
+		                                                                                  \\{\textrm{Also, }}\cos \alpha  = \dfrac{{{\bf{a}} \cdot {\bf{b}}}}{{\left| {\bf{a}} \right|\left| {\bf{b}} \right|}}
+		                                                                                  \\{\textrm{Hence, }}\dfrac{{\left| {{{\bf{c}}_0}} \right|}}{{\left| {\bf{a}} \right|}} = \dfrac{{{\bf{a}} \cdot {\bf{b}}}}{{\left| {\bf{a}} \right|\left| {\bf{b}} \right|}}\\\left| {{{\bf{c}}_0}} \right| = \dfrac{{{\bf{a}} \cdot {\bf{b}}}}{{\left| {\bf{b}} \right|}} = {\bf{a}} \cdot {\bf{\hat b}}
+	\end{align*}
+							        
+	\color{black}
+	\2 The foot of perpendicular from ${C_0}$ to $OA$ is ${C_1}$. Show that $|\bf{c}_1|$ = ${\bf{a}} \cdot {\bf{\hat b}}(\cos \alpha )$.\hfill[1]
+							    
+	\color{blue}
+	\begin{align*}
+		\cos \alpha & = \dfrac{{\left| {{{\bf{c}}_1}} \right|}}{{\left| {{{\bf{c}}_0}} \right|}} \\\left| {{{\bf{c}}_1}} \right| &= \left| {{{\bf{c}}_0}} \right|\cos \alpha  \\&= {\bf{a}} \cdot {\bf{\hat b}}\cos \alpha
+	\end{align*}
+	\color{black}
+	\2 ${C_n}$ is the $n$th foot of perpendicular. State $\left| {{{\bf{c}}_n}} \right|$ in terms of $a$, $b$, $n$ and $\alpha$.\hfill[1]
+	\color{blue}
+	\begin{align*}
+		\left| {{{\bf{c}}_n}} \right| = {\bf{a}} \cdot {\bf{\hat b}}{\cos ^n}\alpha 
+	\end{align*}
+	\color{black}
+							        
+	\2 State the sum to infinity of scalar projections $\left| {{{\bf{c}}_0}} \right| + \left| {{{\bf{c}}_1}} \right| + ... + \left| {{{\bf{c}}_n}} \right| + ...$.\hfill[1]
+	\color{blue}
+	\begin{align*}
+		{\textrm{Sum to infinity}} & = {\bf{a}} \cdot {\bf{\hat b}} + {\bf{a}} \cdot {\bf{\hat b}}\cos \alpha  + ... + {\bf{a}} \cdot {\bf{\hat b}}{\cos ^n}\alpha  + ... \\ &= \dfrac{{{\bf{a}} \cdot {\bf{\hat b}}}}{{1 - \cos \alpha }}
+	\end{align*}
+			
+	\color{black}
+	\1 Referred to the origin $O$, points $A$ and $B$ have position vectors given by: ${\bf{a}} = {\bf{i}} - {p^2}{\bf{k}}$ and ${\bf{b}} = \frac{2}{p}{\bf{i}} - {\bf{j}} + {\bf{k}}$ respectively, where $p$ is to be found. Given that ${\left| {{\bf{a}} \times {\bf{b}}} \right|^2} = 4{p^2} + 2$, find the value(s) that $p$ can take.\hfill[4]
+	\color{blue}
+	\begin{align*}
+		{\left| {{\bf{a}} \times {\bf{b}}} \right|^2} & = {\left| {\left( {\begin{array}{*{20}{c}}1 \\0\\{ - {p^2}}\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}{2{p^{ - 1}}}\\{ - 1}\\1\end{array}} \right)} \right|^2}\\ &= {\left| {\left( {\begin{array}{*{20}{c}}{ - {p^2}}\\{ - 1 - 2p}\\{ - 1}\end{array}} \right)} \right|^2}\\ &= {\left( {{p^2}} \right)^2} + {(1 + 2p)^2} + 1\\ &= {p^4} + 4{p^2} + 4p + 2\\ &= 4{p^2} + 2\\p^4 + 4p &= 0\\p({p^3} + 4) &= 0\\p &=  - \sqrt[3]{4} \textrm{   since } p \ne 0
+	\end{align*}
+							        
+	\color{black}
+	\1 The vector equation of $l$ is given by $l:{\bf{r}} = {\bf{a}} + \lambda {\bf{b}},\;\lambda  \in \mathbb{R}$. Point $F$ is the foot of perpendicular from origin $O$ to the line $l$. If $\left| {\bf{b}} \right| = 1$ and ${\bf{a}} \cdot {\bf{b}} = 1$, express the position vector $\overrightarrow {OF}$ in terms of \textbf{a} and \textbf{b}.\hfill[3]
+	\color{blue}
+	\begin{align*}
+		\textrm{Let }\overrightarrow {OF}  = {\bf{a}} + k{\bf{b}} {\textrm{for some }}k \in \mathbb{R}\\
+		\textrm{Since}OF \bot l, ({\bf{a}} + k{\bf{b}}) \cdot {\bf{b}} & = 0 \\{\bf{a}} \cdot {\bf{b}} + k{\left| {\bf{b}} \right|^2} &= 0\\1 + k{(1)^2} &= 0\\k &= -1\\\therefore \overrightarrow {OF}  = {\bf{a}} - {\bf{b}}
+	\end{align*}
+			
+			    
+	\color{black}
+	\1 The equations of $l$ and $m$ are given by $l:{\bf{r}} = {\bf{a}} + \lambda {\bf{b}},\;\lambda  \in \mathbb{R}$ and $m:{\bf{r}} = {\bf{b}} + \mu {\bf{a}},\;\mu  \in \mathbb{R}$, where \textbf{a} and \textbf{b} are co-planar vectors. State the conditions such that lines $l$ and $m$ are skew lines.\hfill[2]\\
+	\color{blue}
+	Equating $l$ and $m$ and since skew lines are parallel and do not intersect,
+	\begin{align*}
+		{\bf{a}} + \lambda {\bf{b}} = \mu {\bf{a}} + {\bf{b}}                                                  \\
+		\lambda  \ne 1,\mu  \ne 1\;{\textrm{and}}\;{\bf{a}} \ne k{\bf{b}}\;{\textrm{for all }}k \in \mathbb{R} 
+	\end{align*}
+							    
+							    
+	\color{black}
+	\1 Points $A$ and $B$ have position vectors $\bf{a}$ and $\bf{b}$ with respect to the origin $O$. It is given that $({\bf{a}} - 3{\bf{b}}) \times (5{\bf{a}} + 7{\bf{b}}) = 11$. Find the perpendicular distance from point $A$ to line $OB$ if $\left| {\bf{b}} \right| = 11$.\hfill[4]
+	\color{blue}
+	\begin{align*}
+		({\bf{a}} - {\bf{3b}}) \times ({\bf{5a}} + {\bf{7b}}) & = {\bf{a}} \times {\bf{a}} + 7{\bf{a}} \times {\bf{b}} - 15{\bf{b}} \times {\bf{a}} - 21{\bf{b}} \times {\bf{b}} \\
+		11                                                    & = 22{\bf{a}} \times {\bf{b}}                                                                                     \\
+		{\bf{a}} \times {\bf{b}}                              & = \dfrac{1}{2}                                                                                                   \\
+		{\textrm{Perpendicular distance from A to OB}}\;      & =\dfrac{{\left| {{\bf{a}} \times {\bf{b}}} \right|}}{{\left| {\bf{b}} \right|}}                                  \\
+		                                                      & = \dfrac{{\left( {\dfrac{1}{2}} \right)}}{{11}}                                                                  \\
+		                                                      & = \dfrac{1}{{22}}{\textrm{units}}                                                                                
+	\end{align*}
+							    
+	\color{black}
+	\1 Points $A$ and $B$ have position vectors $\bf{a}$ and $\bf{b}$ with respect to the origin $O$. It is given that $\left| {\bf{a}} \right| = 3$, $\left| {\bf{b}} \right| = 1$ and ${\bf{a}} \cdot {\bf{b}} = 2$.
+	\2 State the vector equation of line $AB$.\hfill[1]
+	\color{blue}
+	\begin{align*}
+		l_{AB}:{\mathbf{r}} = {\mathbf{a}} + \lambda ({\mathbf{b}} - {\mathbf{a}}),\;\lambda  \in \mathbb{R} 
+	\end{align*}
+	\color{black}
+							        
+	\2 Find $\left| {{\bf{b}} - {\bf{a}}} \right|$.\hfill[2]
+	\color{blue}
+	\begin{align*}
+		\left| {{\bf{b}} - {\bf{a}}} \right| & = \sqrt {({\bf{b}} - {\bf{a}}) \cdot ({\bf{b}} - {\bf{a}})} \\ &= \sqrt {{{\left| {\bf{b}} \right|}^2} - 2{\bf{b}} \cdot {\bf{a}} + {{\left| {\bf{a}} \right|}^2}} \\ &= \sqrt {1 - 2(2) + {3^2}} \\ &= \sqrt 6
+	\end{align*}
+	\color{black}
+							        
+	\2 Find the position vector of $F$, the foot of perpendicular from $O$ to $AB$, in terms of $\bf{a}$ and $\bf{b}$.\hfill[3]
+	\color{blue}
+	\begin{align*}
+		\textrm{Let}\overrightarrow {OF}  = {\bf{a}} + k({\bf{b}} - {\bf{a}})\textrm{for some }k \in \mathbb{R}\\
+		{\textrm{Since }}OF \bot AB  {\textrm{ }},({\bf{a}} + k({\bf{b}} - {\bf{a}})) \cdot ({\bf{b}} - {\bf{a}}) & = 0 \\{\bf{a}} \cdot {\bf{b}} - {\left| {\bf{a}} \right|^2} + k{\left| {{\bf{b}} - {\bf{a}}} \right|^2} &= 0\\2 - {3^2} + k{(\sqrt 6 )^2} &= 0\\\therefore k = \dfrac{7}{6}\\\textrm{Substituting }k = \dfrac{7}{6}\textrm{ back into }\overrightarrow {OF} ,\\\overrightarrow {OF}  = {\bf{a}} + \dfrac{7}{6}({\bf{b}} - {\bf{a}})\\\overrightarrow {OF}  = \dfrac{1}{6}(7{\bf{b}} - {\bf{a}})
+	\end{align*}
+	\color{black}
+							    
+	\2 	Find $\left| {7{\bf{b}} - {\bf{a}}} \right|$. Hence, find the exact area of triangle $OAB$.\hfill[3]
+	\color{blue}
+	\begin{align*}
+		\left| {7{\bf{b}} - {\bf{a}}} \right| & = \sqrt {(7{\bf{b}} - {\bf{a}}) \cdot (7{\bf{b}} - {\bf{a}})}                                             \\ &= \sqrt {49{{\left| {\bf{b}} \right|}^2} - 14{\bf{a}} \cdot {\bf{b}} + {{\left| {\bf{a}} \right|}^2}} \\ &= \sqrt {49 - 14(2) + {3^2}} \\ &= \sqrt {30}\\
+		{\textrm{Area of triangle OAB}}       & = \frac{1}{2} \times \left| {\overrightarrow {AB} } \right| \times \left| {\overrightarrow {OF} } \right| \\ &= \frac{1}{2}\left| {{\bf{b}} - {\bf{a}}} \right|\left| {\frac{1}{6}(7{\bf{b}} - {\bf{a}})} \right|\\ &= \frac{1}{2}\left( {\sqrt 6 } \right)\left( {\frac{1}{6}} \right)(\sqrt {30} )\\ &= \frac{{\sqrt 5 }}{2}{\textrm{unit}}{{\textrm{s}}^2}
+	\end{align*}
+							        
+	\color{black}
+	\1 Referred to the origin $O$, points $A$ and $B$ have the position vectors $\overrightarrow {OA}  = {\bf{i}} - 2{\bf{k}}$ and $\overrightarrow {OB}  =  - {\bf{i}} + 2{\bf{j}} + 2{\bf{k}}$ respectively.
+	\2 Verify that $P(3,-2,-6)$ lies on line $AB$.\hfill[2]
+	\color{blue}
+	\[\begin{gathered}
+		{\text{Line AB // }}\left( {\begin{array}{*{20}{c}}
+			{ - 1} \\ 
+			2 \\ 
+			2 
+			\end{array}} \right) - \left( {\begin{array}{*{20}{c}}
+			1 \\ 
+			0 \\ 
+			{ - 2} 
+			\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+			{ - 2} \\ 
+			2 \\ 
+			4 
+			\end{array}} \right) \hfill \\
+		{\text{Equation of line AB is }}{\mathbf{r}} = \left( {\begin{array}{*{20}{c}}
+			1 \\ 
+			0 \\ 
+			{ - 2} 
+			\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}
+			{ - 1} \\ 
+			1 \\ 
+			2 
+			\end{array}} \right),\;\lambda  \in \mathbb{R} \hfill \\
+		\hfill \\ 
+		\end{gathered} \]
+		\[\begin{gathered}
+			{\text{Substitute }}{\mathbf{r}} = \left( {\begin{array}{*{20}{c}}
+				3 \\ 
+				{ - 2} \\ 
+				{ - 6} 
+				\end{array}} \right): \hfill \\
+			{\text{ }}\left( {\begin{array}{*{20}{c}}
+				3 \\ 
+				{ - 2} \\ 
+				{ - 6} 
+				\end{array}} \right) = \left( {\begin{array}{*{20}{c}}
+				1 \\ 
+				0 \\ 
+				{ - 2} 
+				\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}
+				{ - 1} \\ 
+				1 \\ 
+				2 
+				\end{array}} \right)\;{\text{for some }}\lambda  \in \mathbb{R}. \hfill \\
+			{\text{There is a solution }}\lambda  =  - 2 \hfill \\
+			{\text{Hence, P lies on AB}}{\text{.}} \hfill \\ 
+			\end{gathered} \]
+																					    
+			\color{black}
+			\2 Find the position vector of $F$, the foot of perpendicular from $P$ to $AB$.\hfill[3]
+			\color{blue}
+			\[			{\text{Let }}\overrightarrow {OF} = \left( {\begin{array}{*{20}{c}}
+					1 \\ 
+					0 \\ 
+					{ - 2} 
+					\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}
+					{ - 1} \\ 
+					1 \\ 
+					2 
+					\end{array}} \right),\;{\text{for some }}k \in \mathbb{R} \\\]
+				\begin{align*}
+					\overrightarrow {PF} & = \left( {\begin{array}{*{20}{c}} 
+					1 \\ 
+					0 \\ 
+					{ - 2} 
+					\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}
+					{ - 1} \\ 
+					1 \\ 
+					2 
+					\end{array}} \right) - \left( {\begin{array}{*{20}{c}}
+					3 \\ 
+					2 \\ 
+					{ - 6} 
+					\end{array}} \right) \\ 
+					                     & = \left( {\begin{array}{*{20}{c}} 
+					{ - 2 - k} \\ 
+					{ - 2 + k} \\ 
+					{4 + 2k} 
+					\end{array}} \right) \\ 
+				\end{align*}
+																								            
+				\color{black}
+				\2 Hence, find the equation of line $PF$.\hfill[3]
+				\color{blue}
+				\[\begin{gathered}
+					{\text{Since }}PF \bot AB, \hfill \\
+					\left( {\begin{array}{*{20}{c}}
+						{ - 2 - k} \\ 
+						{ - 2 + k} \\ 
+						{4 + 2k} 
+						\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}
+						{ - 1} \\ 
+						1 \\ 
+						2 
+						\end{array}} \right) = 0 \hfill \\
+					\therefore k =  - \frac{4}{3} \hfill \\
+					{\text{Substituting }}k =  - \frac{4}{3}{\text{back into }}\overrightarrow {PF} , \hfill \\
+					\overrightarrow {PF}  = \left( {\begin{array}{*{20}{c}}
+						{ - 2 + \frac{8}{3}} \\ 
+						{ - 2 - \frac{4}{3}} \\ 
+						{4 - \frac{8}{3}} 
+						\end{array}} \right) = \frac{2}{3}\left( {\begin{array}{*{20}{c}}
+						1 \\ 
+						{ - 5} \\ 
+						2 
+						\end{array}} \right) \hfill \\
+					{\text{Equation of line }}PF:\;{\mathbf{r}} = \left( {\begin{array}{*{20}{c}}
+						3 \\ 
+						{ - 2} \\ 
+						{ - 6} 
+						\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}
+						1 \\ 
+						{ - 5} \\ 
+						2 
+						\end{array}} \right),\;\mu  \in \mathbb{R} \hfill \\ 
+					\end{gathered}\]
+																															        
+																														        
+					\color{black}
+					\1  The equations of lines ${l_1}$ and ${l_2}$ are given by:\\\\${l_1}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}1\\3\\1\end{array}} \right),\;\lambda  \in \mathbb{R}$ and ${l_2}:\dfrac{{x + 1}}{9} = \dfrac{y}{7} = \dfrac{{4 - z}}{3}$ respectively.\\\\Point $A$ has coordinates $(2, - 1,1)$ while the foot of perpendicular from $A$ to ${l_2}$ is $F$.
+					\2 Find the position vector of $P$, the point of intersection between ${l_1}$ and ${l_2}$.\hfill[2]
+					\color{blue}   
+					\begin{align*}
+						{\textrm{Vector equation of line }}{l_2}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}{ - 1} \\0\\4\end{array}} \right) + \mu \left({\begin{array}{*{20}{c}}9\\7\\{ - 3}\end{array}} \right),\mu  \in \mathbb{R}\\{\textrm{Equating both lines, }}\left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right) + \lambda \left({\begin{array}{*{20}{c}}1\\3\\1\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\4\end{array}} \right) + \mu \left({\begin{array}{*{20}{c}}9\\7\\{ - 3}\end{array}} \right)\\\end{align*}\begin{align*}{\textrm{Using G.C., we obtain }}\lambda  = \frac{3}{2},\;\mu  = \frac{1}{2}.\\\overrightarrow {OP}  = \left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right) + \frac{3}{2}\left( {\begin{array}{*{20}{c}}1\\3\\1\end{array}} \right) = \frac{1}{2}\left({\begin{array}{*{20}{c}}7\\7\\5\end{array}} \right)
+					\end{align*}
+					\color{black}
+					\2 Find vector $\overrightarrow {AF}$.\hfill[3]
+					\color{blue}   
+					\begin{align*}
+						{\textrm{Let }}\overrightarrow {OF} & = \left( {\begin{array}{*{20}{c}}{ - 1} \\0\\4\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}9\\7\\{ - 3}\end{array}} \right),\;{\textrm{for some }}k \in \mathbb{R}\\\overrightarrow {AF}  &= \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\4\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}9\\7\\{ - 3}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right)\\ &= \left( {\begin{array}{*{20}{c}}{ - 3 + 9k}\\{1 + 7k}\\{3 - 3k}\end{array}} \right)\\
+					\end{align*}
+					\begin{align*}
+						{\textrm{Since }}AF \bot {l_2},\left( {\begin{array}{*{20}{c}}{ - 3 + 9k} \\{1 + 7k}\\{3 - 3k}\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}9\\7\\{ - 3}\end{array}} \right) = 0\\\therefore k = \dfrac{{29}}{{139}}\\
+					\end{align*}
+					\begin{align*}
+						{\textrm{Substituting }}k = \dfrac{{29}}{{139}}{\textrm{ back into }}\overrightarrow {AF}{\textrm{ }},\overrightarrow {AF}  = \left( {\begin{array}{*{20}{c}}{ - 3 + 9\left( {\frac{{29}}{{139}}} \right)} \\{1 + 7\left( {\frac{{29}}{{139}}} \right)}\\{3 - 3\left( {\frac{{29}}{{139}}} \right)}\end{array}} \right) = \frac{2}{{139}}\left( {\begin{array}{*{20}{c}}{ - 78}\\{171}\\{165}\end{array}} \right)
+					\end{align*}
+					\color{black}
+					\2 Hence, find the vector equation of ${l_3}$, the reflection of ${l_1}$ in ${l_2}$.\hfill[3]
+					\color{blue}
+					\begin{align*}
+						{\textrm{Let }}A'{\textrm{ on }}{l_3}\;{\textrm{be the reflection of }}A{\textrm{ in }}{l_2}. \\\overrightarrow {AF}  &= \overrightarrow {FA'} \\ &= \overrightarrow {OA'}  - \overrightarrow {OF}\\\overrightarrow {OA'}  &= \overrightarrow {AF}  + \overrightarrow {OF} \\ &= \dfrac{2}{{139}}\left( {\begin{array}{*{20}{c}}{ - 78}\\{171}\\{165}\end{array}} \right) + \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\4\end{array}} \right) + \dfrac{{29}}{{139}}\left( {\begin{array}{*{20}{c}}9\\7\\{ - 3}\end{array}} \right)\\ &= \dfrac{1}{{139}}\left( {\begin{array}{*{20}{c}}{ - 34}\\{545}\\{973}\end{array}} \right) \\\end{align*}\begin{align*}{l_3}{\textrm{//}}\dfrac{1}{{139}}\left( {\begin{array}{*{20}{c}}{ - 34}\\{545}\\{973}\end{array}} \right) - \dfrac{1}{2}\left( {\begin{array}{*{20}{c}}7\\7\\5\end{array}} \right) &= \left( {\begin{array}{*{20}{c}}{ - \frac{{1041}}{{278}}}\\{\frac{{117}}{{278}}}\\{\frac{9}{2}}\end{array}} \right)\\\therefore {l_3}:{\bf{r}} &= \dfrac{1}{2}\left( {\begin{array}{*{20}{c}}7\\7\\5\end{array}} \right) + \alpha \left( {\begin{array}{*{20}{c}}{ - 1041}\\{117}\\{1251}\end{array}} \right),\;\alpha  \in \mathbb{R}
+					\end{align*}
+																								
+					\color{black}
+					\1 Points $A$ and $B$ with position vectors $ - {\bf{i}} + 2{\bf{j}} - {\bf{k}}$ and $3{\bf{i}} + {\bf{k}}$ respectively both lie on ${l_1}$. The line ${l_2}$ has Cartesian equation ${l_2}:x = 7,\;y - 3 = z$.
+																	
+					\2 Show that ${l_1}\;{\textrm{and}}\;{l_2}$ are skew lines.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}{l_1}{\textrm{//}}\left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{ - 1}\\2\\{ - 1}\end{array}} \right) = \left( {\begin{array}{*{20}{c}}4\\{ - 2}\\2\end{array}} \right)\\{l_1}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right),\;\lambda  \in \mathbb{R}\\{l_2}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}7\\3\\0\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}0\\1\\1\end{array}} \right),\;\mu  \in \mathbb{R}\end{array}\]
+					\[\begin{array}{l}{\textrm{Equating both lines,}}\left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right) = \left( {\begin{array}{*{20}{c}}7\\3\\0\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}0\\1\\1\end{array}} \right)\end{array}\]
+					\[{\textrm{We have the following equations }}\left\{ \begin{array}{l}2\lambda  = 4\\ - \lambda  - \mu  = 3\\\lambda  - \mu  =  - 1\end{array} \right.\]
+					\[\begin{array}{l}{\textrm{Using a G}}{\textrm{.C}}{\textrm{., there is no solution found}}{\textrm{.}}\\{\textrm{Hence, }}{l_1}{\textrm{ and }}{l_2}{\textrm{ are skew lines}}{\textrm{.}}\end{array}\]
+																	
+					\color{black}
+					\2 Find a vector that is perpendicular to both ${l_1}\;{\textrm{and}}\;{l_2}$.\hfill[1]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{A vector that is perpendicular to both }}{l_1}{\textrm{ and }}{l_2}{\textrm{ //}}\;\left( {\begin{array}{*{20}{c}}2\\{ - 1}\\1\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}0\\1\\1\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 2}\\{ - 2}\\2\end{array}} \right)\\{\textrm{Let the vector be }}\left( {\begin{array}{*{20}{c}}1\\1\\{ - 1}\end{array}} \right).\end{array}\]
+																								    
+					\color{black}
+					\2 Hence, find the shortest distance between ${l_1}\;{\textrm{and}}\;{l_2}$.\hfill[3]
+					\color{blue}
+					\\{\textrm{Let point }}$C${\textrm{ on }}${l_2}${\textrm{ be }}$C(7,3,0)$.
+					\begin{align*}
+						\textrm{Shortest distance} & =  \textrm{Projection of }\overrightarrow {BC} {\textrm{ onto }}\left( {\begin{array}{*{20}{c}}1 \\1\\{ - 1}\end{array}} \right).\\ &= \frac{{\left( {\left( {\begin{array}{*{20}{c}}7\\3\\0\end{array}} \right) - \left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right)} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\1\\{ - 1}\end{array}} \right)}}{{\left| {\left( {\left( {\begin{array}{*{20}{c}}7\\3\\0\end{array}} \right) - \left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right)} \right)} \right| \cdot \left| {\left( {\begin{array}{*{20}{c}}1\\1\\{ - 1}\end{array}} \right)} \right|}}\\ &= \frac{{\left( {\begin{array}{*{20}{c}}4\\3\\{ - 1}\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\1\\{ - 1}\end{array}} \right)}}{{\left| {\left( {\begin{array}{*{20}{c}}4\\3\\{ - 1}\end{array}} \right)} \right| \cdot \left| {\left( {\begin{array}{*{20}{c}}1\\1\\{ - 1}\end{array}} \right)} \right|}}\\ &= \dfrac{8}{{\sqrt {26} \sqrt 3 }}\\ &= \dfrac{{4\sqrt {78} }}{{39}}{\textrm{units}}
+					\end{align*}
+																						        
+					\color{black}
+					\1 Referred to an origin $O$, points $A$ and $B$ have coordinates $(-1,2,2)$ and $(0,1,2)$ respectively. The point $P$ on $OA$ is such that $OP:PA = \lambda :1$ and the point $Q$ on $OB$ is such that $OQ:QB = \lambda :1 - \lambda $, where $\lambda $ is a real constant to be determined.
+					\2 Find the area of $\Delta OAB$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{c}{\textrm{Area of }}\Delta OAB = \frac{1}{2}\left| {{\bf{a}} \times {\bf{b}}} \right|\\ = \frac{1}{2}\left| {\left( {\begin{array}{*{20}{c}}{ - 1}\\2\\2\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}0\\1\\2\end{array}} \right)} \right|\\ = \frac{1}{2}\left| {\left( {\begin{array}{*{20}{c}}2\\2\\{ - 1}\end{array}} \right)} \right|\\ = \frac{1}{2}\sqrt {4 + 4 + 1} \\ = \frac{3}{2}{\textrm{unit}}{{\textrm{s}}^2}\end{array}\]
+																						            
+					\color{black}
+					\2 Express the ratio $\frac{{{\textrm{Area of }}\Delta OAB}}{{{\textrm{Area of }}\Delta OPQ}}$ in terms of $\lambda $.\hfill[3]
+					\color{blue}
+					\[\begin{array}{c}{\textrm{Area of }}\Delta OPQ = \frac{1}{2}\left| {\overrightarrow {OP}  \times \overrightarrow {OQ} } \right|\\ = \frac{1}{2}\left| {\left( {\frac{\lambda }{{\lambda  + 1}}} \right){\bf{a}} \times \left( {\frac{\lambda }{{\lambda  + 1 - \lambda }}} \right){\bf{b}}} \right|\\ = \frac{1}{2}\left| {\frac{{{\lambda ^2}}}{{\lambda  + 1}}{\bf{a}} \times {\bf{b}}} \right|\\ = \left( {\frac{{{\lambda ^2}}}{{\lambda  + 1}}} \right)\left( {\frac{1}{2}\left| {{\bf{a}} \times {\bf{b}}} \right|} \right)\;{\textrm{, since }}0 < \lambda  < 1{\textrm{ so }}\frac{1}{{\lambda  + 1}} > 0\\ = \left( {\frac{{{\lambda ^2}}}{{\lambda  + 1}}} \right)\left( {{\textrm{Area of }}\Delta OAB} \right)\end{array}\]
+					\[\therefore \frac{{{\textrm{Area of }}\Delta OAB}}{{{\textrm{Area of }}\Delta OPQ}} = \frac{{\lambda  + 1}}{{{\lambda ^2}}}\]
+																						
+																						            
+					\color{black}
+					\2 Deduce if $PQ$ is ever parallel to $AB$ for some value of $\lambda$.\hfill[3]
+					\color{blue}
+					\[\begin{array}{c}\overrightarrow {PQ}  = \overrightarrow {OQ}  - \overrightarrow {OP} \\ = \lambda {\bf{b}} - \left( {\frac{\lambda }{{\lambda  + 1}}} \right){\bf{a}}\end{array}\]
+					\[\begin{array}{l}{\textrm{Assuming }}PQ{\textrm{ // }}AB,\\\lambda {\bf{b}} - \left( {\frac{\lambda }{{\lambda  + 1}}} \right){\bf{a}} = k({\bf{b}} - {\bf{a}}){\textrm{ for some }}k \in \mathbb{R}\\{\textrm{Equating scalar multiples of }}{\bf{b}}{\textrm{ and }}{\bf{a}},\\\lambda  = k{\textrm{ and }}\frac{\lambda }{{\lambda  + 1}} = k\\\lambda  = \frac{\lambda }{{\lambda  + 1}}\\{\lambda ^2} = 0\\{\textrm{However, clearly }}0 < \lambda  < 1{\textrm{, so no value of }}k \in \mathbb{R}{\textrm{ exists for }}PQ{\textrm{ // }}AB.\end{array}\]
+															
+																
+					\1 Line $l$ has the equation $ - x = \frac{{y - 3}}{2} = \frac{{z + 4}}{2}$. Line $m$, which is parallel to $\left( {\begin{array}{*{20}{c}}c\\0\\1\end{array}} \right)$ where $c$ is some real constant, is obtained by rotating line $l$ $45^\circ $ about the point $A(0,3, - 4)$. Find the possible vector equations of line $m$.\hfill[5]
+					\color{blue}
+					\begin{align*}
+						{\textrm{Equation of line }}l:\;{\bf{r}} = \left( {\begin{array}{*{20}{c}}0 \\3\\{ - 4}\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}{ - 1}\\2\\2\end{array}} \right),\lambda  \in \mathbb{R}\\{\textrm{Equation of line }}m:\;{\bf{r}} = \left( {\begin{array}{*{20}{c}}0\\3\\{ - 4}\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}c\\0\\1\end{array}} \right),\mu  \in \mathbb{R}\\\cos \left( {\frac{\pi }{4}} \right) = \frac{{\sqrt 2 }}{2} = \frac{{\left( {\begin{array}{*{20}{c}}{ - 1}\\2\\2\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}c\\0\\1\end{array}} \right)}}{{\left| {\left( {\begin{array}{*{20}{c}}{ - 1}\\2\\2\end{array}} \right)} \right|\left| {\left( {\begin{array}{*{20}{c}}c\\0\\1\end{array}} \right)} \right|}}= \frac{{2 - c}}{{3\sqrt {{c^2} + 1} }}
+					\end{align*}
+					\begin{align*}
+						\frac{1}{2} & = \frac{{{{(2 - c)}^2}}}{{9({c^2} + 1)}} \\9{c^2} + 9 &= 2{c^2} - 8c + 8\\7{c^2} + 8c + 1 &= 0\\c &=  - \frac{1}{7}{\textrm{ or }} - 1
+					\end{align*}
+					\textrm{The two equations of line }$m${ are: }
+					\begin{align*}
+						{\textrm{ }}\;{\bf{r}} = \left( {\begin{array}{*{20}{c}}0 \\3\\{ - 4}\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\7\end{array}} \right),\mu  \in \mathbb{R}{\textrm{ and  }}\;{\bf{r}} = \left( {\begin{array}{*{20}{c}}0\\3\\{ - 4}\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\1\end{array}} \right),\mu  \in \mathbb{R}
+					\end{align*}
+																						            
+					\color{black}
+										
+					\1 Three points $A, B$ and $C$ referred from the origin $O$ have position vectors given by:
+					${\bf{a}} = 2{\bf{i}} + 4{\bf{j}} - {\bf{k}}$, ${\bf{b}} =  - 2{\bf{i}} + 5{\bf{j}} + 2{\bf{k}}$ and ${\bf{c}} = \frac{3}{2}{\bf{i}} + \frac{5}{2}{\bf{j}} - 3{\bf{k}}$.
+					\2 Find the vector equations of lines $AB$ and $AC$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}\overrightarrow {AB}  = \left( {\begin{array}{*{20}{c}}2\\4\\{ - 1}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{ - 2}\\5\\2\end{array}} \right) = \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\{ - 3}\end{array}} \right)\\\overrightarrow {AC}  = \left( {\begin{array}{*{20}{c}}2\\4\\{ - 1}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{1.5}\\{2.5}\\{ - 3}\end{array}} \right) = \frac{1}{2}\left( {\begin{array}{*{20}{c}}1\\3\\4\end{array}} \right)\\{\textrm{Equations of lines }}AB{\textrm{ and }}AC{\textrm{ are:}}\\{\bf{r}} = \left( {\begin{array}{*{20}{c}}2\\4\\{ - 1}\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\{ - 3}\end{array}} \right),\;\lambda  \in \mathbb{R}{\textrm{ }}\;{\textrm{and}}\;{\textrm{  }}{\bf{r}} = \left( {\begin{array}{*{20}{c}}2\\4\\{ - 1}\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}1\\3\\4\end{array}} \right),\;\mu  \in \mathbb{R}\;\;{\textrm{respectively}}{\textrm{.}}\end{array}\]
+					\color{black}
+																						            
+					\2 Find two vector equations of $l$, where $l$ is the line representing the all the midpoints of lines $AB$ and $AC$.\hfill[4]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{Unit vector of }}AB,\;{{\bf{u}}_1} = \dfrac{1}{{\sqrt {{4^2} + 1 + {3^2}} }}\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\{ - 3}\end{array}} \right) = \dfrac{1}{{\sqrt {26} }}\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\{ - 3}\end{array}} \right)\\{\textrm{Unit vector of }}AC,\;{{\bf{u}}_2} = \dfrac{1}{{\sqrt {1 + {3^2} + {4^2}} }}\left( {\begin{array}{*{20}{c}}1\\3\\4\end{array}} \right) = \dfrac{1}{{\sqrt {26} }}\left( {\begin{array}{*{20}{c}}1\\3\\4\end{array}} \right)\end{array}\]
+					\[\begin{array}{l}{\textrm{Two possible midpoints have position vectors }}\dfrac{1}{2}({{\bf{u}}_1} + {{\bf{u}}_2}){\textrm{ and }}\dfrac{1}{2}({{\bf{u}}_1} - {{\bf{u}}_2}).\\\dfrac{1}{2}({{\bf{u}}_1} + {{\bf{u}}_2}) = \dfrac{1}{2}\left( {\dfrac{1}{{\sqrt {26} }}\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\{ - 3}\end{array}} \right) + \dfrac{1}{{\sqrt {26} }}\left( {\begin{array}{*{20}{c}}1\\3\\4\end{array}} \right)} \right) = \dfrac{1}{{2\sqrt {26} }}\left( {\begin{array}{*{20}{c}}5\\2\\1\end{array}} \right)\\\dfrac{1}{2}({{\bf{u}}_1} - {{\bf{u}}_2}) = \dfrac{1}{2}\left( {\dfrac{1}{{\sqrt {26} }}\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\{ - 3}\end{array}} \right) - \dfrac{1}{{\sqrt {26} }}\left( {\begin{array}{*{20}{c}}1\\3\\4\end{array}} \right)} \right) = \dfrac{1}{{2\sqrt {26} }}\left( {\begin{array}{*{20}{c}}3\\{ - 4}\\{ - 7}\end{array}} \right)\\{\textrm{Hence, two possible equations of }}l{\textrm{ are:}}\\{l_1}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}2\\4\\{ - 1}\end{array}} \right) + s\left( {\begin{array}{*{20}{c}}5\\2\\1\end{array}} \right),\;s \in \mathbb{R}{\textrm{ and}}\\{l_2}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}2\\4\\{ - 1}\end{array}} \right) + t\left( {\begin{array}{*{20}{c}}{ - 3}\\4\\7\end{array}} \right),\;t \in \mathbb{R}\end{array}\]
+																						        
+					\color{black}
+					\1 Point $A$ with position vector \textbf{a} lies on plane $\pi $ with normal parallel to vector \textbf{n}. Given that ${\left| {{\bf{a}} - {\bf{n}}} \right|^2} = 3$ and ${\left| {\bf{n}} \right|^2} = 4 - {\left| {\bf{a}} \right|^2}$, find the value of $d$ if the equation of plane $\pi $ is ${\bf{r}} \cdot {\bf{n}} = d$
+					.\hfill[4]
+					\color{blue}
+					\\{\textrm{The equation of plane }}$\pi$ {\textrm{ is }}${\bf{r}} \cdot {\bf{n}} = {\bf{a}} \cdot {\bf{n}}$.
+					\\To find ${\bf{a}} \cdot {\bf{n}}$,
+					\begin{align*}
+						{\left| {{\bf{a}} - {\bf{n}}} \right|^2} & = 3 \\({\bf{a}} - {\bf{n}}) \cdot ({\bf{a}} - {\bf{n}}) &= 3\\{\left| {\bf{a}} \right|^2} + {\left| {\bf{n}} \right|^2} - 2{\bf{a}} \cdot {\bf{n}} &= {\bf{3}}\\4 - 2{\bf{a}} \cdot {\bf{n}} &= {\bf{3}}\\{\bf{a}} \cdot {\bf{n}} &= \frac{1}{2}
+						\\
+					\end{align*}
+					$\therefore$ {\textrm{The equation of }}$\pi$ {\textrm{ is }}${\bf{r}} \cdot {\bf{n}} = \frac{1}{2}$.
+															
+					\color{black}
+										
+					\1 The equations of parallel planes $p$ and $q$ are given by $p:{\bf{r}} \cdot {\bf{n}} = d$ and $q:{\bf{r}} \cdot {\bf{n}} = kd$. Line $l$ given by equation ${\bf{r}} = {\bf{a}} + \lambda {\bf{b}},\;\lambda  \in \mathbb{R}$ intersects planes $p$ and $q$ at points $A$ and $B$ respectively.
+					\2 Show that $\overrightarrow {AB}  = {\bf{b}}\left( {\dfrac{{d(k - 1)}}{{{\bf{b}} \cdot {\bf{n}}}}} \right)$.\hfill[4]
+					\color{blue}\\
+					${\textrm{Substitute equation of }}l{\textrm{ into }}p{\textrm{ and }}q{\textrm{ to get }}\overrightarrow {OA} {\textrm{ and }}\overrightarrow {OB} {\textrm{ respectively}}{\textrm{.}}$
+					\begin{align*}
+						{\textrm{For }}A,({\bf{a}} + \lambda {\bf{b}}) \cdot {\bf{n}} & = d \\\lambda  &= \frac{{d - {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}\\\overrightarrow {OA}  &= {\bf{a}} + \left( {\frac{{d - {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}} \right){\bf{b}}\\{\textrm{For }}B,({\bf{a}} + \lambda {\bf{b}}) \cdot {\bf{n}} &= kd\\\lambda &= \frac{{kd - {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}
+					\end{align*}
+					\begin{align*}
+						\overrightarrow {OB}  &= {\bf{a}} + \left( {\frac{{kd - {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}} \right){\bf{b}}
+						  \\\overrightarrow {AB}  &= \overrightarrow {OB}  - \overrightarrow {OA} \\ &= {\bf{a}} + \left( {\frac{{kd - {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}} \right){\bf{b}} - \left( {{\bf{a}} + \left( {\frac{{d - {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}} \right){\bf{b}}} \right)\\ &= \left( {\frac{{kd - {\bf{a}} \cdot {\bf{n}} - d + {\bf{a}} \cdot {\bf{n}}}}{{{\bf{b}} \cdot {\bf{n}}}}} \right){\bf{b}}\\ &= {\bf{b}}\left( {\frac{{d(k - 1)}}{{{\bf{b}} \cdot {\bf{n}}}}} \right)
+					\end{align*}
+					\color{black}
+										
+					\2 Hence, or otherwise, show that the perpendicular distance between planes $p$ and $q$ is equal to $\dfrac{{d(k - 1)}}{{\left| {\bf{n}} \right|}}$ units.\hfill[2]
+					\color{blue}
+					\begin{align*}
+						{\textrm{Perpendicular distance between planes }}p{\textrm{ and }}q & = {\textrm{Projection of }}\overrightarrow {AB} {\textrm{ onto }}{\bf{n}} \\ &= \dfrac{{\left( {{\bf{b}}\left( {\dfrac{{d(k - 1)}}{{{\bf{b}} \cdot {\bf{n}}}}} \right)} \right) \cdot {\bf{n}}}}{{\left| {\bf{n}} \right|}}\\ &= \dfrac{{\left( {\dfrac{{d(k - 1)}}{{{\bf{b}} \cdot {\bf{n}}}}} \right)\left( {{\bf{b}} \cdot {\bf{n}}} \right)}}{{\left| {\bf{n}} \right|}}\\ &= \dfrac{{d(k - 1)}}{{\left| {\bf{n}} \right|}}
+					\end{align*}
+															
+					\1 The equations of plane $\pi $ and $l$ are given by:\\\\
+					$\pi :{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right) =  - 1$ and $l:{\bf{r}} = \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\2\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}3\\2\\k\end{array}} \right),\;\lambda ,k \in \mathbb{R}$ respectively.
+					\2 Show that, for $\pi $ and $l$ to intersect, $k \ne  - \frac{7}{2}$.\hfill[1]
+					\color{blue}\\
+					${\textrm{If }}\pi {\textrm{ and }}l{\textrm{ do not intersect, }}l{\textrm{ is perpendicular to the normal of }}\pi {\textrm{.}}$
+					\begin{align*}	\\{\textrm{i}}{\textrm{.e}}{\textrm{. }}\left( {\begin{array}{*{20}{c}}3\\2\\k\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right) = 2k + 7 = 0\\k =  - \frac{7}{2}\\
+					\end{align*}
+					${\textrm{Hence, for intersection, }}k \ne  - \frac{7}{2}.$\\\\
+					\color{black}
+					For the rest of the question, assume $k = 1$.
+					\2 Find the coordinates of point $P$, the point of intersection of $\pi $ and $l$.\hfill[2]
+					\color{blue}
+					\\{\textrm{Equating line and plane,}}
+					\begin{align*}
+						\left( {\left( {\begin{array}{*{20}{c}}{ - 1} \\0\\2\end{array}} \right) + s\left( {\begin{array}{*{20}{c}}3\\2\\1\end{array}} \right)} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right) =  - 1\\9s + 3 =  - 1\\s =  - \frac{4}{9}\\
+					\end{align*}
+					$\therefore \overrightarrow {OP}  = \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\2\end{array}} \right) - \dfrac{4}{9}\left( {\begin{array}{*{20}{c}}3\\2\\1\end{array}} \right) =  - \dfrac{1}{9}\left( {\begin{array}{*{20}{c}}{21}\\8\\{ - 14}\end{array}} \right)$
+										
+					\color{black}
+					\2 Find the shortest distance from $A( - 1,0,2)$ to $\pi $.\hfill[3]
+					\color{blue}\\
+					$\overrightarrow {AP} & =  - \frac{1}{9}\left( {\begin{array}{*{20}{c}}{21} \\8\\{ - 14}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\2\end{array}} \right) =  - \frac{4}{9}\left( {\begin{array}{*{20}{c}}3\\2\\8\end{array}} \right)$\\
+					\begin{align*}
+						{\textrm{Shortest distance }} & =  {\textrm{Projection of }}\overrightarrow {AP} {\textrm{ onto normal of }}\pi \\ &= \frac{{\left| { - \frac{4}{9}\left( {\begin{array}{*{20}{c}}3\\2\\8\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right)} \right|}}{{\left| {\left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right)} \right|}}\\ &= \frac{4}{9}\left( {\frac{{23}}{3}} \right)\\ &= \frac{{92}}{{27}}{\textrm{units}}
+					\end{align*}
+					\color{black}
+					\2 Find the acute angle between $\pi $ and $l$.\hfill[2]
+					\color{blue}\\
+					${\textrm{Let acute angle be }}\alpha {\textrm{.}}$
+					\begin{align*}
+						\sin \alpha  = \dfrac{{\left( {\dfrac{{92}}{{27}}} \right)}}{{\left| {\overrightarrow {AP} } \right|}} = \dfrac{{\left( {\dfrac{{92}}{{27}}} \right)}}{{\dfrac{4}{9}\left| {\left( {\begin{array}{*{20}{c}}3 \\2\\8\end{array}} \right)} \right|}} = \dfrac{{\left( {\dfrac{{92}}{{27}}} \right)}}{{\dfrac{4}{9}\sqrt {77} }}
+					\end{align*}
+					$\therefore \alpha  = 60.9^\circ {\textrm{ (1 d}}{\textrm{.p}}{\textrm{.)}}$
+					\color{black}
+															
+					\1 Plane $\pi $ has a normal parallel to $\left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)$ and has the equation:
+					\begin{align*}
+						\pi :{\bf{r}} = \left( {\begin{array}{*{20}{c}}7 \\4\\3\end{array}} \right) + t\left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right) + s\left( {\begin{array}{*{20}{c}}a\\2\\1\end{array}} \right),\;\;t,s \in \mathbb{R},
+					\end{align*}
+					where $a$ is some real constant to be determined.
+					\2 Find the value of $a$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}\left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right){\textrm{ // }}\left( {\begin{array}{*{20}{c}}3\\0\\1\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}a\\2\\1\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 2}\\{a - 3}\\6\end{array}} \right)\\{\textrm{Clearly, }}\left( {\begin{array}{*{20}{c}}{ - 2}\\{a - 3}\\6\end{array}} \right) = 2\left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)\\\therefore a = 5\end{array}\]
+					\color{black}
+					\2 Find the scalar product equation of plane $\pi $.\hfill[1]
+					\color{blue}
+					\[{\textrm{Equation is }}{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}7\\4\\3\end{array}} \right) = 6\]
+					\color{black}
+					\2 Line ${l}$ passes through $\pi $, the origin $O$ and $A(3,2,5)$. Find the position vector of $P$, the point of intersection between line ${l}$ and plane $\pi $.\hfill[2]	
+					\color{blue}
+					\[{\textrm{Equation of }}l{\textrm{ is }}{\bf{r}} = \lambda \left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right),\;\lambda  \in \mathbb{R}.\]
+					\begin{align*}
+						{\textrm{Substituting into equation of }}\pi {\textrm{, }}k\left( {\begin{array}{*{20}{c}}3 \\2\\5\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right) &= 6{\textrm{ for some }}k \in \mathbb{R}\\14k &= 6\\k &= \frac{4}{7}
+					\end{align*}
+					$\therefore \overrightarrow {OP}  = \frac{4}{7}\left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right)$
+					\color{black}
+					\2 Find $\left| {\overrightarrow {PF} } \right|$, where $F$ is the foot of perpendicular from $A$ to plane $\pi $.\hfill[3]
+					\color{blue}
+					\begin{align*}
+						\left| {\overrightarrow {PF} } \right| & = \dfrac{{\left| {\overrightarrow {PA}  \times \left( {\begin{array}{*{20}{c}}{ - 1} \\1\\3\end{array}} \right)} \right|}}{{\left| {\left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)} \right|}}\\ &= \dfrac{{\left| {\dfrac{3}{7}\left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)} \right|}}{{\sqrt {11} }}\\ &= \dfrac{{\dfrac{3}{7}\left| {\left( {\begin{array}{*{20}{c}}1\\{ - 14}\\5\end{array}} \right)} \right|}}{{\sqrt {11} }}\\ &= \ddfrac{{\ddfrac{3}{7}\sqrt {1 + {{14}^2} + {5^2}} }}{{\sqrt {11} }}\\ &= \ddfrac{3}{7}\sqrt {\dfrac{{222}}{{11}}} {\textrm{ units}}
+					\end{align*}
+					\color{black}
+					\2 Hence find $\left| {\overrightarrow {PG} } \right|$, where $G$ is the foot of perpendicular from $O$ to plane $\pi $.\hfill[2]
+					\color{blue}
+					\[\dfrac{{\left| {\overrightarrow {PG} } \right|}}{{\left| {\overrightarrow {PF} } \right|}} = \dfrac{{\left| {\overrightarrow {OP} } \right|}}{{\left| {\overrightarrow {PA} } \right|}} = \dfrac{4}{3}{\textrm{ by similar triangles, so we have:}}\]
+					\begin{align*}
+						\left| {\overrightarrow {PG} } \right| & = \dfrac{4}{3}\left| {\overrightarrow {PF} } \right| \\ &= \dfrac{4}{3}\left( {\dfrac{3}{7}\sqrt {\dfrac{{222}}{{11}}} } \right)\\ &= \dfrac{4}{7}\sqrt {\dfrac{{222}}{{11}}} \;{\textrm{unit}}{{\textrm{s}}^2}
+					\end{align*}
+					\color{black}
+															        
+					\color{black}
+					\1 The equations of planes ${\pi _1}$, ${\pi _2}$ and ${\pi _3}$ are such that: \\\\
+					${\pi _1}:2x + 3y + 4z =  - 1$, \;\;  ${\pi _2}: - 2x + y - z = 5$ \;\;  and\;\;   ${\pi _3}:{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}a\\{ - 5}\\{ - a}\end{array}} \right) = k$.
+					\2 Find the vector equation of $l$, the line of intersection between ${\pi _1}$ and ${\pi _2}$.\hfill[3]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{We have the two equations,}}\;\left\{ \begin{array}{l}2x + 3y + 4z =  - 1\\ - 2x + y - z = 5\end{array} \right.\\{\textrm{Using a G}}{\textrm{.C}}{\textrm{., we obtain }}x =  - 2 - \dfrac{7}{8}z,\;y = 1 - \dfrac{3}{4}z,\;z \in \mathbb{R}.\\{\textrm{Equation of }}l{\textrm{ is }}{\bf{r}} = \left( {\begin{array}{*{20}{c}}{ - 2}\\1\\0\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}7\\6\\{ - 8}\end{array}} \right),\;\lambda  \in \mathbb{R}.\end{array}\]
+					\color{black}
+					\2 Given that $a = 2$, find the value of $k$ such that ${\pi _3}$ contains $l$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{Assuming that }}{\pi _3}\;{\textrm{contains }}l,{\textrm{ substituting equation of }}l{\textrm{ into equation of }}\pi {\textrm{,}}\\{\textrm{ }}\left( {\left( {\begin{array}{*{20}{c}}{ - 2}\\1\\0\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}7\\6\\{ - 8}\end{array}} \right)} \right) \cdot \left( {\begin{array}{*{20}{c}}2\\{ - 5}\\{ - 2}\end{array}} \right) = k{\textrm{ for all }}\lambda  \in \mathbb{R}\\ - 4 + 14\lambda  - 5 - 30\lambda  + 16\lambda  = k\\k =  - 9\end{array}\]
+															            
+					\color{black}
+					\2 Given that $a = 1,\;k = 3$, find the point of intersection of ${\pi _1}$, ${\pi _2}$ and ${\pi _3}$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{We have the three equations,}}\;\left\{ \begin{array}{l}2x + 3y + 4z =  - 1\\ - 2x + y - z = 5\\x - 5y - z = 3\end{array} \right.\\{\textrm{Using a G}}{\textrm{.C}}{\textrm{., we obtain }}x =  - \dfrac{{20}}{3},\;y =  - 3\;{\textrm{and }}z = \dfrac{{16}}{3}.\end{array}\]
+					\color{black}
+										
+					\1 An incident beam of light was reflected perfectly (${\theta _1} = {\theta _2}$) on a round mirror.
+															        
+					\begin{figure}[h]
+						\centering
+						\includegraphics[width=0.8\textwidth]{fig_1}
+						\caption{Mirror}
+					\end{figure}
+															        
+					A student modelled the scenario such that the incident beam is ${l_1}$, the reflected beam is ${l_2}$ and the mirror is $\pi $, where $\pi $ contains the vectors ${\bf{i}} + {\bf{j}} + {\bf{k}}$, ${\bf{i}} - {\bf{j}}$ and $2{\bf{i}} + {\bf{j}} - {\bf{k}}$.
+															        
+					\2 Find the equation of the plane $\pi $ in the form ${\bf{r}} \cdot {\bf{n}} = d$.\hfill[3]
+					\color{blue}
+					\begin{align*}
+						{\textrm{Normal of plane }}\pi {\textrm{ // }}\left( {\left( {\begin{array}{*{20}{c}}1 \\1\\1\end{array}} \right) - \left( {\begin{array}{*{20}{c}}1\\{ - 1}\\0\end{array}} \right)} \right) &\times \left( {\left( {\begin{array}{*{20}{c}}2\\1\\{ - 1}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}1\\{ - 1}\\0\end{array}} \right)} \right)\\ &= \left( {\begin{array}{*{20}{c}}0\\2\\1\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}1\\2\\{ - 1}\end{array}} \right)\\ &= \left( {\begin{array}{*{20}{c}}{ - 4}\\1\\{ - 2}\end{array}} \right)\\d &= \left( {\begin{array}{*{20}{c}}1\\{ - 1}\\0\end{array}} \right).\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right) = 5\\\therefore {\textrm{Equation of }}\pi {\textrm{ is }}{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right) = 5
+					\end{align*}
+					\color{black}
+					\2	Show that $P(1,3,2)$, the point of intersection between ${l_1}$ and ${l_2}$ lies on $\pi $.\hfill[1]
+					\color{blue}
+					\begin{align*}
+						{\textrm{Substituting }}{\bf{r}} & = \left( {\begin{array}{*{20}{c}}1 \\3\\2\end{array}} \right){\textrm{ into equation of }}\pi ,{\textrm{ }}\\{\textrm{LHS}} &= \left( {\begin{array}{*{20}{c}}1\\3\\2\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right) = 5\\ 
+						&= {\textrm{RHS}}
+					\end{align*}
+					\color{black}
+					\2	State the vector equation of ${l_3}$, the axis of reflection between ${l_1}$ and ${l_2}$.\hfill[1]	
+					\color{blue}
+					\begin{equation*}
+						{l_3}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}1 \\3\\2\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right),\;\lambda  \in \mathbb{R}
+					\end{equation*}
+					\color{black}
+					\2	Given that $A(t,1,1)$ lies on ${l_1}$, where $t > 0$, find $t$ such that ${\theta _1} = {\theta _2} = \frac{\pi }{4}$.\hfill[4]
+					\color{blue}
+					\begin{align*}
+						\overrightarrow {PA} & = \left( {\begin{array}{*{20}{c}}t \\1\\1\end{array}} \right) - \left( {\begin{array}{*{20}{c}}1\\3\\2\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{t - 1}\\{ - 2}\\{ - 1}\end{array}} \right)
+					\end{align*}
+					${\textrm{Let }}\alpha {\textrm{ be the angle between }}{l_1}{\textrm{ and }}{l_3}.$
+					\begin{align*}
+						{\textrm{cos}}\alpha & = \frac{{\left( {\begin{array}{*{20}{c}}{t - 1} \\{ - 2}\\{ - 1}\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right)}}{{\left| {\left( {\begin{array}{*{20}{c}}{t - 1}\\{ - 2}\\{ - 1}\end{array}} \right)} \right| \cdot \left| {\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right)} \right|}}\\ &= \frac{{4t - 4}}{{\sqrt {{t^2} - 2t + 6} \sqrt {21} }}
+					\end{align*}
+					$
+					{\textrm{Since }}{\theta _1} = \frac{\pi }{4},\;\alpha  = \frac{{3\pi }}{4}{\textrm{ or }}\frac{\pi }{4}.\\
+					{\textrm{Regardless}},\;{\cos ^2}\alpha  = \frac{1}{2}.$
+					\begin{align*}
+						{\textrm{Squaring both sides, }}\frac{1}{2} & = \frac{{16{t^2} - 32t + 16}}{{21{t^2} - 42t + 126}} \\11{t^2} - 22t - 94 = 0
+					\end{align*}
+					${\textrm{Using G}}{\textrm{.C}}{\textrm{., }}t = 2.50{\textrm{ or }} - 3.41\;({\textrm{3s}}{\textrm{.f}}{\textrm{.)}}\\
+					{\textrm{Since}}\;t > 0,\;t = 2.50$
+													
+					\color{black}
+					For the rest of the question, take $t = 4$.
+					\2	Find the shortest distance from $A$ to $\pi $.\hfill[2]
+					\color{blue}
+					\begin{align*}
+						{\textrm{Shortest distance}} = \dfrac{{\left| {\overrightarrow {AP}  \times \left( {\begin{array}{*{20}{c}}4 \\{ - 1}\\2\end{array}} \right)} \right|}}{{\left| {\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right)} \right|}}\\
+						\begin{array}{c} = \dfrac{{\left| {\left( {\begin{array}{*{20}{c}}{ - 3}                                     \\2\\1\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right)} \right|}}{{\sqrt {21} }}\\ = \dfrac{{\left| {\left( {\begin{array}{*{20}{c}}5\\{10}\\{ - 5}\end{array}} \right)} \right|}}{{\sqrt {21} }}\\ = \dfrac{5}{{\sqrt {21} }}\sqrt {1 + {2^2} + 1} \\ = \dfrac{{5\sqrt {14} }}{7}{\textrm{units}}\end{array}
+					\end{align*}
+															
+					\color{black}
+					\2	Find the coordinates of $F$, the foot of perpendicular from $A$ to ${l_3}$. Hence, or otherwise, find the equation of ${l_2}$.\hfill[6]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{Let }}\overrightarrow {OF}  = \left( {\begin{array}{*{20}{c}}1\\3\\2\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right),\;{\textrm{for some }}k \in \mathbb{R}\\\overrightarrow {AF}  = \left( {\begin{array}{*{20}{c}}1\\3\\2\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right) - \left( {\begin{array}{*{20}{c}}4\\1\\1\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 3 + 4k}\\{2 - k}\\{1 + 2k}\end{array}} \right)\\{\textrm{Since }}\overrightarrow {AF}  \bot {l_3},\\\left( {\begin{array}{*{20}{c}}{ - 3 + 4k}\\{2 - k}\\{1 + 2k}\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right) = 0\\ - 12 + 21k = 0\\k = \dfrac{4}{7}\\\end{array}\]
+					\[\begin{array}{l}\overrightarrow {OF}  = \left( {\begin{array}{*{20}{c}}1\\3\\2\end{array}} \right) + \dfrac{4}{7}\left( {\begin{array}{*{20}{c}}4\\{ - 1}\\2\end{array}} \right) = \dfrac{1}{7}\left( {\begin{array}{*{20}{c}}{23}\\{17}\\{22}\end{array}} \right)\\\therefore F\left( {\dfrac{{23}}{7},\;\dfrac{{17}}{7},\;\dfrac{{22}}{7}} \right)\end{array}\]
+															
+					${\textrm{Let }}A'{\textrm{ be the reflection of point }}A{\textrm{ in }}{l_3}.$
+					\begin{align*}
+						\overrightarrow {OA'} & = \overrightarrow {OA}  + 2\overrightarrow {AF} \\ &= \left( {\begin{array}{*{20}{c}}4\\1\\1\end{array}} \right) + 2\left( {\dfrac{1}{7}\left( {\begin{array}{*{20}{c}}{23}\\{17}\\{22}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}4\\1\\1\end{array}} \right)} \right)\\ &= \dfrac{1}{7}\left( {\begin{array}{*{20}{c}}{18}\\{27}\\{37}\end{array}} \right)\\\overrightarrow {A'P}  &= \left( {\begin{array}{*{20}{c}}1\\3\\2\end{array}} \right) - \dfrac{1}{7}\left( {\begin{array}{*{20}{c}}{18}\\{27}\\{37}\end{array}} \right)\\ &= \dfrac{1}{7}\left( {\begin{array}{*{20}{c}}{ - 11}\\{ - 6}\\{ - 23}\end{array}} \right)
+					\end{align*}
+										
+					${\textrm{Since }}{l_2}{\textrm{ is parallel to }}\overrightarrow {A'P} {\textrm{ and contains }}P,{\textrm{ equation of }}{l_2}{\textrm{ is}}$
+					\begin{align*}
+						{\bf{r}} = \left( {\begin{array}{*{20}{c}}1 \\3\\2\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}{11}\\6\\{23}\end{array}} \right),\;\mu  \in \mathbb{R}.
+					\end{align*}
+										
+										
+					\color{black}
+					\newpage
+					\1 A professional card stacker stacks two cards $P$ and $Q$ as follows:
+					\begin{figure}[h]
+						\centering
+						\includegraphics[width=0.5\textwidth]{fig_2}
+						\caption{Card Stack}
+					\end{figure}
+															        
+					Mr Poh models the scenario such that the two cards are planes $P$ and $Q$, where the equation of plane $P$ is $P:{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right) = 1$, where line ${l_1}$ is a normal to plane $P$ that contains $A( - 3,3,2)$. Line ${l_2}$, a normal to plane $Q$, also contains point $A$ and is parallel to the vector $\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\a\end{array}} \right)$ where $a < 0$. ${l_3}$ is the line of intersection between planes $P$ and $Q$.
+					\2 Find the coordinates of $B$, the point of intersection between ${l_1}$ and plane $P$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{Equation of }}{l_1}{\textrm{ is }}{\bf{r}} = \left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) + \lambda \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right),\;\lambda  \in \mathbb{R}\\{\textrm{Substitute equation of }}{l_1}{\textrm{ into equation of }}P:\\\left( {\left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right)} \right) \cdot \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right) = 1{\textrm{ for some }}k \in \mathbb{R}\\ - 10 + 11k = 1\\k = 1\\\overrightarrow {OB}  = \left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) + \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right) = \left( {\begin{array}{*{20}{c}}0\\2\\3\end{array}} \right)\\\therefore B(0,\;2,\;3)\end{array}\]
+					\color{black}
+					\2 Given that ${l_2}$ is obtaining by rotating ${l_1}$ ${\cos ^{ - 1}}\dfrac{9}{{11}}$ about point $A$, find $a$; Hence, find the vector equation of ${l_2}$.\hfill[4]
+					\color{blue}
+					\[\begin{array}{l} \pm \cos \left( {{{\cos }^{ - 1}}\dfrac{9}{{11}}} \right) = \frac{{\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\a\end{array}} \right)}}{{\left| {\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right)} \right|\left| {\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\a\end{array}} \right)} \right|}}\\ \pm \frac{9}{{11}} = \frac{{10 + a}}{{\sqrt {11} \sqrt {10 + {a^2}} }}\\\frac{{81}}{{121}} = \frac{{100 + {a^2} + 20a}}{{110 + 11{a^2}}}\\8910 + 891{a^2} = 12100 + 121{a^2} + 2420a\\770{a^2} - 2420a - 3190 = 0\\\end{array}\]
+					${\textrm{Using a G}}{\textrm{.C}}{\textrm{., we obtain }}a =  - 1{\textrm{ or }}\dfrac{{29}}{7}.{\textrm{ Since }}a < 0,{\textrm{ }}a =  - 1.$
+					\[\therefore {l_2}:{\bf{r}} = \left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) + \mu \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right),\mu  \in \mathbb{R}\]
+															
+					\color{black}
+															        
+					\2 	The point of intersection between ${l_2}$ and plane $Q$ is point $B'$. Given that $\left| {\overrightarrow {AB} } \right| = \left| {\overrightarrow {AB'} } \right|$, find the position vector of $B'$ given that the $x$-coordinate of $B' < 0$.\hfill[3]
+					\color{blue}
+					\begin{align*}
+						\left| {\overrightarrow {AB'} } \right| & = \left| {\overrightarrow {AB} } \right| \\ &= \left| {\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\1\end{array}} \right)} \right|\\ &= \sqrt {11}
+					\end{align*}
+															
+					\begin{align*}
+						{\textrm{Unit vector along }}AB' = \frac{{\left( {\begin{array}{*{20}{c}}3 \\{ - 1}\\{ - 1}\end{array}} \right)}}{{\left| {\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\{ - 1}\end{array}} \right)} \right|}} = \frac{1}{{\sqrt {11} }}\left( {\begin{array}{*{20}{c}}3\\{ - 1}\\{ - 1}\end{array}} \right)
+					\end{align*}
+					\begin{align*}
+						\overrightarrow {OB'} & = \overrightarrow {OA}  \pm \frac{{\left| {\overrightarrow {AB'} } \right|}}{{\sqrt {11} }}\left( {\begin{array}{*{20}{c}}3 \\{ - 1}\\{ - 1}\end{array}} \right)\\ &= \left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) \pm \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\{ - 1}\end{array}} \right)\\ &= \left( {\begin{array}{*{20}{c}}0\\2\\1\end{array}} \right){\textrm{ or }}\left( {\begin{array}{*{20}{c}}{ - 6}\\4\\3\end{array}} \right)
+						\\{\textrm{Since the }}x{\textrm{ - coordinate of }}B' < 0,\overrightarrow {OB'}  &= \left( {\begin{array}{*{20}{c}}{ - 6}\\4\\3\end{array}} \right)
+					\end{align*}
+					\color{black}
+					\2	Find the equation of the plane $Q$ in the form ${\bf{r}} \cdot {\bf{n}} = d$.\hfill[2]
+					\color{blue}\\
+					${\textrm{Since plane }}Q{\textrm{ contains }}B'{\textrm{, equation of plane}}\;Q{\textrm{ is}}$
+					\begin{align*}
+						{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}3 \\{ - 1}\\{ - 1}\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 6}\\4\\3\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}3\\{ - 1}\\{ - 1}\end{array}} \right) = 25
+					\end{align*}
+					\color{black}
+					\2	Find the vector equation of ${l_3}$.\hfill[2]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{We have the two equations,}}\;\left\{ \begin{array}{l}3x - y + z = 1\\3x - y - z =  - 25\end{array} \right.\\{\textrm{Using a G}}{\textrm{.C}}{\textrm{., we obtain }}x =  - 4 + \frac{1}{3}y,\;y \in \mathbb{R},\;z = 13.\\{\textrm{Equation of }}{l_3}{\textrm{ is }}{\bf{r}} = \left( {\begin{array}{*{20}{c}}{ - 4}\\0\\{13}\end{array}} \right) + \tau \left( {\begin{array}{*{20}{c}}1\\3\\0\end{array}} \right),\;\tau  \in \mathbb{R}.\end{array}\]
+					\color{black}
+					The equation of plane $R$ is such that it reflects the image of plane $P$ to form plane $Q$.
+					\2	Find the vector $\overrightarrow {AF} $, where $F$ is the foot of perpendicular from $A$ to ${l_3}$. \\
+					Hence, find the equation of plane $R$ in the form ${\bf{r}} \cdot {\bf{n}} = d$.\hfill[5]
+					\color{blue}
+					\[\begin{array}{l}{\textrm{Let }}\overrightarrow {OF}  = \left( {\begin{array}{*{20}{c}}{ - 4}\\0\\{13}\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}1\\3\\0\end{array}} \right){\textrm{ for some }}k \in \mathbb{R}\\\overrightarrow {AF}  = \left( {\begin{array}{*{20}{c}}{ - 4}\\0\\{13}\end{array}} \right) + k\left( {\begin{array}{*{20}{c}}1\\3\\0\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 1 + k}\\{ - 3 + 3k}\\{11}\end{array}} \right)\\{\textrm{Since }}\overrightarrow {AF}  \bot {l_3},\\\left( {\begin{array}{*{20}{c}}{ - 1 + k}\\{ - 3 + 3k}\\{11}\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\3\\0\end{array}} \right) = 0\\ - 10 + 10k = 0\\k = 1\\\therefore \overrightarrow {AF}  = \left( {\begin{array}{*{20}{c}}{ - 1 + 1}\\{ - 3 + 3}\\{11}\end{array}} \right) = \left( {\begin{array}{*{20}{c}}0\\0\\{11}\end{array}} \right)\\{\textrm{Since plane }}R{\textrm{ is parallel to both }}\overrightarrow {AF} {\textrm{ and }}{l_3},{\textrm{ }}\\{\textrm{Normal to plane }}R{\textrm{ // }}\left( {\begin{array}{*{20}{c}}0\\0\\1\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}1\\3\\0\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 3}\\1\\0\end{array}} \right)\\{\textrm{Equation of plane }}R{\textrm{ is }}{\bf{r}} \cdot \left( {\begin{array}{*{20}{c}}{ - 3}\\1\\0\end{array}} \right) = \left( {\begin{array}{*{20}{c}}{ - 3}\\3\\2\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}{ - 3}\\1\\0\end{array}} \right) = 12\end{array}\]
+					\color{black}
+															
+															
+															
+															
+																				
+																						
+																						
+																					
+																															
+					\end{outline}
+\end{document}
