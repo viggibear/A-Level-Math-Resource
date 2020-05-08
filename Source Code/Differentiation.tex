@@ -153,10 +153,57 @@ pdfproducer={PDFLaTeX},%
  \1 The parametric equations of curve C are: \[x = 1 + {\mathrm{e}^{ - at}},\;y = {\mathrm{e}^{at}} + {\mathrm{e}^{ - at}}\;{\textrm{ where }}t \geq 0.\] %Question 5
 
  \2  Sketch $C$, including all stationary points and asymptotes where applicable.\hfill[2]
+ \begin{answer}
+  \color{black}
+  \begin{tikzpicture}
+   \begin{axis}[
+     axis lines = center,
+     xlabel = $x$,
+     ylabel = $y$,
+     xmin = 0, xmax = 2,
+     ymin = 0, ymax = 10,
+     legend pos=outer north east
+    ]
+    \addplot [
+     domain=0:5,
+     samples=100,
+     color=blue,
+    ]
+    ({1+e^(-x)},
+    {e^x-e^(-x)});
+    \addlegendentry{$(1 + {\mathrm{e}^{ - at}}, {\mathrm{e}^{at}} + {\mathrm{e}^{ - at}})$}
+
+    \addplot[black, mark=*, only marks] coordinates {(1,0)};
+    \node[label={180:{$x=1$}}] at (axis cs:1,2) {};
+    \addplot[mark=none, black, ultra thick,dotted] coordinates {(1,0) (1,12)};
+
+    \addplot[black, mark=*, only marks] coordinates {(0,0)};
+    \node[label={0:{$y=0$}}] at (axis cs:0.5,0.5) {};
+   \end{axis}
+  \end{tikzpicture}
+
+ \end{answer}
 
  \2 Find the equation of the normal to the curve $C$ at $t = \frac{\ln{2}}{{2a}}$.\hfill[3]
+ \begin{answer}
+  Recall that for a parametric equation, $\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}y}{\mathrm{d}t}\div\frac{\mathrm{d}x}{\mathrm{d}t}$. Furthermore, the gradient of the normal at a given point is equal to $-[\frac{\mathrm{d}y}{\mathrm{d}x}]^{-1}$ at that point
+  \begin{align*}
+   \frac{\mathrm{d}y}{\mathrm{d}x}=\frac{a\mathrm{e}^{at}-a\mathrm{e}^{-at}}{-a\mathrm{e}^{-at}} = 1-\mathrm{e}^{2at}
+  \end{align*}
+  We will now find the values for $\frac{\mathrm{d}y}{\mathrm{d}x}, x, y$ when $t=\frac{\ln2}{2a}$ to get the equation of the normal
+  \begin{align*}
+   \left.\frac{\mathrm{d}y}{\mathrm{d}x}\right|_{t=2}     & = -1                                      \\
+   (x,y)|_{t=2}                                           & = (1+\frac{\sqrt2}{2}, \frac{3\sqrt2}{2}) \\
+   \implies \textrm{Eqn Normal:}\quad y-\frac{3\sqrt2}{2} & = (x-1-\frac{\sqrt2}{2})                  \\
+   y                                                      & = x-1+\sqrt2
+  \end{align*}
+ \end{answer}
 
  \2 What can be said about the normals to the curve $C$ as $t$ gets large?\hfill[1]
+ \begin{answer}
+  As $t\rightarrow\infty$, $\mathrm{e^{2at}}\rightarrow\infty$, thus, $-[\frac{\mathrm{d}y}{\mathrm{d}x}]^{-1} = -\frac{1}{1-\mathrm{e}^{2at}}\rightarrow0\implies$ the normals become parallel to the $x$-axis
+ \end{answer}
+
 
  \1 A boy throws a rock in the air. It is launched at an angle $\theta$ to the horizontal ground, where $0 < \theta  < \frac{\pi }{2}$. As shown in the diagram, its position in the air $(x,y)$, where $x$ is the horizontal position and $y$ is the vertical position, is approximated by: \[x = (20\cos \theta )t,\,\;y = (20\sin \theta )t - 5{t^2},\]where $t$ is the time in seconds.
  \[
@@ -188,12 +235,42 @@ pdfproducer={PDFLaTeX},%
  \2 Find, in terms of $\theta$,
 
  \3 The time taken for the toy plane to hit the ground;\hfill[2]
+ \begin{answer}
+  When the toy plane hits the ground, $y=0$
+  \begin{align*}
+   (20\sin \theta )t - 5{t^2} = -5t(t-4\sin\theta) & = 0                                   \\
+   \implies t                                      & = 0 \quad\textrm{OR}\quad 4\sin\theta
+  \end{align*}
+  It takes $(4\sin\theta)$s for the toy plane to hit the ground
+ \end{answer}
 
  \3 The maximum height reached by the toy plane;\hfill[2]
+ \begin{answer}
+  Note that $y(t)$ is symmetrical about the centre $t=2\sin\theta$ and thus, it is at the maximum at this time.
+  \begin{align*}
+   y|_{t=2\sin\theta} = (20\sin\theta)\cdot2\sin\theta - 5(2\sin\theta)^2 = 20\sin^2\theta
+  \end{align*}
+  The maximum height is $(20\sin^2\theta)$ units.
+ \end{answer}
 
  \3 The horizontal distance travelled by the toy plane.\hfill[2]
+ \begin{answer}
+  The horizontal distance is equal to the $x$ value when $t=4\sin\theta$ as we found in \textbf{(a)(i)}
+  \begin{align*}
+   x|_{t=4\sin\theta} = (20\cos\theta)\cdot4\sin\theta = 40\sin2\theta
+  \end{align*}
+  The maximum horizontal distance is $(40\sin2\theta)$ units.
+ \end{answer}
 
  \2 Find the angle $\theta$ at which the toy plane should be thrown to attain the maximum horizontal distance.\hfill[2]
+ \begin{answer}
+  Intuitively, we assume that $\theta=45^\circ$ but let us verify this.
+  \begin{align*}
+   \frac{\mathrm{d}x}{\mathrm{d}\theta}     & = 80\cos2\theta   \\
+   \frac{\mathrm{d}^2x}{\mathrm{d}\theta^2} & = -160\sin2\theta \\
+  \end{align*}
+  When $\frac{\mathrm{d}x}{\mathrm{d}\theta}=0$, $\theta=45^\circ$ and $\frac{\mathrm{d}^2x}{\mathrm{d}\theta^2}=-160<0\implies x$ is at a maximum
+ \end{answer}
 
  \1 A hopper in a butter processing factory is used to store pre-processed butter before it is discharged to the next stage of the manufacturing process. One such hopper is designed with the dimensions as follows: %Question 7
  \[
