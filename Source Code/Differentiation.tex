@@ -303,18 +303,24 @@ pdfproducer={PDFLaTeX},%
 
  \2 Ignore the changes in \textbf{(a)} i.e. currently, $t = 0$ and $h = 3$. An operator wants to fill up the entire hopper with butter within 48 hours, with a net inflow of $k\textrm{ m}^3{\textrm{ per hour}}$. Find $k$.\hfill[4]
 
- \1 A student has designed a hexagonal sign as shown (not drawn to scale):
-\[
+ \1 An art student conceptualises a design as shown below. %Question 8
+ \[
  \begin{tikzpicture}
-   \draw (70pt,0) -- (35pt,60.62178pt) -- (-35pt,60.62178pt) -- (-70pt,0) -- (-35pt,-60.62178pt) -- (-11.66667pt,-60.62178pt) -- (-11.66667pt,-120pt) -- (11.66667pt,-120pt) --(11.66667pt,-60.62178pt) -- (35pt,-60.62178pt) -- cycle;
-   \draw[<->](-11.66667pt,-130pt) -- (0,-130pt) node[below] {$\frac{h}{3}$} -- (11.66667pt,-130pt);
-   \draw[<->](20pt,-120pt) -- (20pt,-90.31089pt) node[right] {$h$} -- (20pt,-60.62178pt);
+   \draw[thick] (-80pt,0) arc (180:360:80pt and 20pt);
+   \draw[dotted,thick] (80pt,0) arc (0:180:80pt and 20pt);
+   \draw[thick] (80pt,0) arc (0:180:80pt);
+   \draw[thick] (0,0) -- (40pt,69.2820323pt);
+   \draw[thick] (0,0) -- (-40pt,69.2820323pt);
+   \shadedraw[left color=pink,right color=white, draw=pink!50!black](0,0) -- (40pt,69.2820323pt) arc (0:180:40pt and 4pt) -- cycle;
+   \draw[thick] (0,69.2820323pt) ellipse (40pt and 4pt);
+   \draw[dotted] (0,0) -- (0,80pt);
  \end{tikzpicture}
  \]
- Given that the sign has a fixed perimeter $P$, find $h$ in terms of $P$ to maximise the area of the sign. \hfill[5]
+ The design consists of an inverted glass cone of height $h$ and radius $r$ inscribed within a hemisphere of radius $R$.
+ \2 Show that the volume of the cone $V = \dfrac{1}{3}\pi(R^2-h^2)h$.\hfill[2]
+ \2 Given that $R = \sqrt{3}$, find the maximum volume of the cone.\hfill[4]
 
-
- \1 An inflatable cube is inscribed inside an inflatable sphere such that the cross-section of the figure is as shown:
+ \1 An inflatable cube is inscribed inside an inflatable sphere such that the cross-section of the figure is as shown: %Question 9
  \[
  \begin{tikzpicture}
    \draw (0,0) circle (70pt);
@@ -327,7 +333,32 @@ pdfproducer={PDFLaTeX},%
 
   \2 Calculate the time taken for the sphere to burst. \hfill[3]
 
- \1 In a city of Martians, the birth and death rates are high. The population is $x$ Martians (in thousands) and $t$ is the time in years since 2300. The birth rate is 2 times the population per year and the death rate at 1.5 times the square of the population per year.
+ \1 A student set up an experiment as shown below (not drawn to scale):
+ \[
+ \begin{tikzpicture}
+   \filldraw[color=white!90!gray,draw=black] (0,0) ellipse (50pt and 10pt);
+   \draw[<->](0,5pt) -- (25pt,5pt) node[above]{3} --   (50pt,5pt);
+   \draw[<->](50pt,0pt) -- (50pt,40pt) node[right]{$h_{1}$} --   (50pt,80pt);
+   \draw[dotted](50pt,80pt) -- (0,80pt);
+   \draw (-50pt,0) -- (0,80pt) node[above]{Upright Cone} -- (50pt,0);
+   \draw (130pt,0) -- (130pt,100pt);
+   \draw (210pt,0) -- (210pt,100pt);
+   \filldraw[color=white!90!gray,draw=black] (170pt,0) ellipse (40pt and 10pt);
+   \draw[<->](170pt,5pt) -- (190pt,5pt) node[above]{2} --   (210pt,5pt);
+   \draw[<->](215pt,0pt) -- (215pt,50pt) node[right]{$h_{2}$} --   (215pt,100pt);
+   \draw (170pt, 110pt) node[above] {Cylinder};
+   \draw (170pt,100pt) ellipse (40pt and 10pt);
+   \draw[ultra thick] (0,-10pt) -- (0,-20pt) -- (85pt,-20pt) node[below]{Hose} -- (170pt,-20pt) -- (170pt, -10pt);
+   \filldraw[color=white,draw=black] (0,0) ellipse (2pt and 1pt);
+   \filldraw[color=white,draw=black] (170pt,0) ellipse (2pt and 1pt);
+ \end{tikzpicture}
+ \]
+ The inflatable upright cone and cylinder have fixed plates of radiuses 3 cm and 2 cm  respectively such that only their heights are allowed to vary due to an increase or decrease in volume. The hose is such that gas can be transferred from the upright cone to the cylinder. The gas is incompressible. %Question 10
+ \2 Show that $3\dfrac{\mathrm{d}h_{1}}{\mathrm{d}t}+4\dfrac{\mathrm{d}h_{2}}{\mathrm{d}t}=0$.\hfill[2]
+
+ \2 The gas is now being transferred continuously from the cone to the cylinder. Show that the total surface area of the cone and the cylinder is increasing. \hfill[6]
+
+ \1 In a city of Martians, the birth and death rates are high. The population is $x$ Martians (in thousands) and $t$ is the time in years since 2300. The birth rate is 2 times the population per year and the death rate at 1.5 times the square of the population per year. %Question 11
 
  \2 Show that $\dfrac{{{\textrm{d}}x}}{{{\textrm{d}}t}} = \dfrac{1}{2}(4x - 3{x^2})$\hfill[2]
  \2 Express $\dfrac{1}{{x(4 - 3x)}}$ as a sum of partial fractions.\hfill[2]
