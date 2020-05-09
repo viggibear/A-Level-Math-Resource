@@ -464,7 +464,7 @@ pdfproducer={PDFLaTeX},%
 					\color{black}
 					\2 Find the shortest distance from $A( - 1,0,2)$ to $\pi $.\hfill[3]
 					\color{blue}\\
-					$\overrightarrow {AP} & =  - \frac{1}{9}\left( {\begin{array}{*{20}{c}}{21} \\8\\{ - 14}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\2\end{array}} \right) =  - \frac{4}{9}\left( {\begin{array}{*{20}{c}}3\\2\\8\end{array}} \right)$\\
+					$\overrightarrow {AP} =  - \frac{1}{9}\left( {\begin{array}{*{20}{c}}{21} \\8\\{ - 14}\end{array}} \right) - \left( {\begin{array}{*{20}{c}}{ - 1}\\0\\2\end{array}} \right) =  - \frac{4}{9}\left( {\begin{array}{*{20}{c}}3\\2\\8\end{array}} \right)$\\
 					\begin{align*}
 						{\textrm{Shortest distance }} & =  {\textrm{Projection of }}\overrightarrow {AP} {\textrm{ onto normal of }}\pi \\ &= \frac{{\left| { - \frac{4}{9}\left( {\begin{array}{*{20}{c}}3\\2\\8\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right)} \right|}}{{\left| {\left( {\begin{array}{*{20}{c}}1\\2\\2\end{array}} \right)} \right|}}\\ &= \frac{4}{9}\left( {\frac{{23}}{3}} \right)\\ &= \frac{{92}}{{27}}{\textrm{units}}
 					\end{align*}
@@ -495,14 +495,15 @@ pdfproducer={PDFLaTeX},%
 					\color{blue}
 					\[{\textrm{Equation of }}l{\textrm{ is }}{\bf{r}} = \lambda \left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right),\;\lambda  \in \mathbb{R}.\]
 					\begin{align*}
-						{\textrm{Substituting into equation of }}\pi {\textrm{, }}k\left( {\begin{array}{*{20}{c}}3 \\2\\5\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right) &= 6{\textrm{ for some }}k \in \mathbb{R}\\14k &= 6\\k &= \frac{4}{7}
+						{\textrm{Substituting into equation of }}\pi {\textrm{, }}k\left( {\begin{array}{*{20}{c}}3 \\2\\5\end{array}} \right) \cdot \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right) &= 6{\textrm{ for some }}k \in \mathbb{R}\\14k &= 6\\k &= \frac{3}{7}
 					\end{align*}
-					$\therefore \overrightarrow {OP}  = \frac{4}{7}\left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right)$
+					$\therefore \overrightarrow {OP}  = \frac{3}{7}\left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right)$
 					\color{black}
 					\2 Find $\left| {\overrightarrow {PF} } \right|$, where $F$ is the foot of perpendicular from $A$ to plane $\pi $.\hfill[3]
 					\color{blue}
+					\\The easiest method is to use vector product projection of $\overrightarrow{PA}$ onto the normal of $\pi$. We can find $\overrightarrow{PA}$ using the fact that $O$, $P$ and $A$ are collinear and $OP:PA = 3:4$.
 					\begin{align*}
-						\left| {\overrightarrow {PF} } \right| & = \dfrac{{\left| {\overrightarrow {PA}  \times \left( {\begin{array}{*{20}{c}}{ - 1} \\1\\3\end{array}} \right)} \right|}}{{\left| {\left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)} \right|}}\\ &= \dfrac{{\left| {\dfrac{3}{7}\left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)} \right|}}{{\sqrt {11} }}\\ &= \dfrac{{\dfrac{3}{7}\left| {\left( {\begin{array}{*{20}{c}}1\\{ - 14}\\5\end{array}} \right)} \right|}}{{\sqrt {11} }}\\ &= \ddfrac{{\ddfrac{3}{7}\sqrt {1 + {{14}^2} + {5^2}} }}{{\sqrt {11} }}\\ &= \ddfrac{3}{7}\sqrt {\dfrac{{222}}{{11}}} {\textrm{ units}}
+						\left| {\overrightarrow {PF} } \right| & = \dfrac{{\left| {\overrightarrow {PA}  \times \left( {\begin{array}{*{20}{c}}{ - 1} \\1\\3\end{array}} \right)} \right|}}{{\left| {\left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)} \right|}}\\ &= \dfrac{{\left| {\dfrac{4}{7}\left( {\begin{array}{*{20}{c}}3\\2\\5\end{array}} \right) \times \left( {\begin{array}{*{20}{c}}{ - 1}\\1\\3\end{array}} \right)} \right|}}{{\sqrt {11} }}\\ &= \dfrac{{\dfrac{4}{7}\left| {\left( {\begin{array}{*{20}{c}}1\\{ - 14}\\5\end{array}} \right)} \right|}}{{\sqrt {11} }}\\ &= \dfrac{4}{7}\dfrac{\sqrt {1 + {14}^2 + {5^2}} }{\sqrt {11}}\\ &= \dfrac{4}{7}\sqrt {\dfrac{{222}}{{11}}} {\textrm{ units}}
 					\end{align*}
 					\color{black}
 					\2 Hence find $\left| {\overrightarrow {PG} } \right|$, where $G$ is the foot of perpendicular from $O$ to plane $\pi $.\hfill[2]
@@ -534,7 +535,7 @@ pdfproducer={PDFLaTeX},%
 
 					\begin{figure}[h]
 						\centering
-						\includegraphics[width=0.8\textwidth]{fig_1}
+						\includegraphics[width=0.8\textwidth]{vectors_mirror}
 						\caption{Mirror}
 					\end{figure}
 
@@ -608,7 +609,7 @@ pdfproducer={PDFLaTeX},%
 					\1 A professional card stacker stacks two cards $P$ and $Q$ as follows:
 					\begin{figure}[h]
 						\centering
-						\includegraphics[width=0.5\textwidth]{fig_2}
+						\includegraphics[width=0.5\textwidth]{vectors_tent}
 						\caption{Card Stack}
 					\end{figure}
 
