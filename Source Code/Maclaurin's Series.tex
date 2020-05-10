@@ -1,0 +1,73 @@
+\documentclass[12pt, a4 paper]{article}
+% Set target color model to RGB
+\usepackage[inner=2.0cm,outer=2.0cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{environ}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{outlines}
+\usepackage{enumitem}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb,tkz-linknodes}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+
+\linespread{1.6} % Double Line Spacing
+\usetikzlibrary{arrows.meta,intersections,calc}
+
+\hypersetup{%
+pdfauthor={Vignesh Ravibaskar},%
+pdfcreator={PDFLaTeX},%
+pdfproducer={PDFLaTeX},%
+}
+
+% Our custom enumerate labelling, just making the outlines bold basically
+\setlist[enumerate,1]{label=\textbf{\arabic*}}
+\setlist[enumerate,2]{label=\textbf{({\alph*})}}
+\setlist[enumerate,3]{label=\textbf{({\roman*})}}
+
+\title{Maclaurin's Series}
+\author{Derek, Vignesh}
+\date{2020}
+
+\newcommand{\comm}[1]{}
+\NewEnviron{answer}{\vspace{3mm} \\ \color{blue} {\BODY} \color{black}}
+%\NewEnviron{answer}{\color{blue} \comm{\BODY} \color{black}} % Use this method to hide all answers
+
+\begin{document}
+
+\maketitle
+
+\textbf{MACLAURIN'S SERIES [TBC Marks]}
+\begin{outline}[enumerate]
+\1 Sector $AOB$ of a circle centred at $O$ with radius 4 cm is such that $\sphericalangle AOB = \frac{2\pi}{3}+\theta$ as shown in the diagram below: %Question 1
+\[
+\begin{tikzpicture}
+  \draw (0,0) node[above]{$O$} circle (60pt);
+  \draw (-51.96152pt,-30pt) node[left]{$A$} -- (0,0);
+  \draw (51.96152pt,-30pt) node[right]{$B$} -- (0,0);
+  \filldraw[color=white!70!black,draw=black] (-51.96152pt,-30pt) arc (210:330:60pt);
+  \draw[dotted](-51.96152pt,-30pt) -- (51.96152pt,-30pt);
+\end{tikzpicture}
+\]
+Given that $\theta$ is sufficiently small for $\theta^3$ and higher powers of $\theta$ to be neglected, find the approximate area of the shaded region in terms of $\theta$.\hfill[5]
+
+\1 It is given that $y=\sqrt[3]{(1+x^2)(1+4x^2)}$. %Question 2
+
+  \2 State the Maclaurin's expansion of $y$ in ascending powers of $x$ up to and including the $x^4$ term.\hfill[4]
+
+  \2 Hence, show that $\frac{91487}{90000}$ is a good estimate for $\sqrt[3]{1.0504}$  up to 4 decimal places.\hfill[2]
+
+\1 Given that $y=2^{\sin^{-1}{x}}$, show that $\dfrac{\mathrm{d}^2y}{\mathrm{d}x^2}=\dfrac{1}{y}\left(\dfrac{\mathrm{d}y}{\mathrm{d}x}\right)^2+\dfrac{1}{2x^2-2}\left(\dfrac{\mathrm{d}y}{\mathrm{d}x}\right)$. \hfill[4] \\
+Hence, obtain the first three terms in the Maclaurin's series for $y$.\hfill[3] %Question 3
+
+\1
+
+
+\end{outline}
+
+\end{document}
