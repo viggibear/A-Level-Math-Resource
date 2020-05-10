@@ -42,7 +42,7 @@ pdfproducer={PDFLaTeX},%
 
 \maketitle
 
-\textbf{DIFFERENTIATION [TBC Marks]}
+\textbf{DIFFERENTIATION [80 Marks]}
 \begin{outline}[enumerate]
 
  \1 Differentiate with respect to $x$ the following: %Question 1
@@ -294,14 +294,82 @@ pdfproducer={PDFLaTeX},%
    \draw[<->] (0,-155pt) -- (0, -167.5pt) node [left]{$h$}-- (0,-180pt); %End Filled Butter
   \end{tikzpicture}
  \]
- The hopper can be said to be a cylinder attached to a cone, both of radius 3 metres. At $t$ hours, the height of the butter in the cone is $h$ and the radius of the liquid surface is $r$. At time $t = 0$ hours, the depth of butter is 3 metres.\\
-
+ The hopper can be said to be a cylinder attached to a cone, both of radius 3 metres. At $t$ hours, the height of the butter in the cone is $h$ and the radius of the liquid surface is $r$. At time $t = 0$ hours, the height of butter is 3 metres.\newline
  If the butter is allowed to flow out of the cone at $- 3\textrm{ m}^3{\textrm{ per hour}}$,
  \2 Show that ${h^2}\dfrac{{{\mathrm{d}}h}}{{{\mathrm{d}}t}} =  - \dfrac{{16}}{{3\pi }}$.\hfill[3]
+ \begin{answer}
+ $V_{\textrm{cone}}=\frac{1}{3}\pi r^2 h$, so we first use similar triangles to express $r$ in terms of $h$, obtaining the function $V(h)$ that can be differentiated easily.
+   \begin{align*}
+     \frac{r}{h}&=\frac{3}{4} \implies r=\frac{3}{4}h \\
+     V &= \frac{1}{3}\pi \left(\frac{3}{4}h\right)^2 h \\
+     &= \frac{3}{16}\pi h^3\\
+     \frac{\mathrm{d}V}{{d}t} &= \frac{9}{16}\pi h^2\frac{\mathrm{d}h}{{d}t} = -3 \\
+     {h^2}\dfrac{{{\mathrm{d}}h}}{{{\mathrm{d}}t}} &=  - \dfrac{{16}}{{3\pi }} \textrm{ (shown)}
+   \end{align*}
+ \end{answer}
 
  \2 Calculate the exact time it takes for the butter to completely drain out.\hfill[3]
+ \begin{answer}
+ We now solve the differential equation by integrating w.r.t. $h$ on the LHS and $t$ on the RHS.
+   \begin{align*}
+     \int {h^2}\mathrm{d}h &= \int - \frac{16}{3\pi} \mathrm{d}t \\
+     \frac{1}{3}h^3 &= -\frac{16}{3\pi}t + C
+   \end{align*}
+   We first substitute the condition $t=0,h=3$ to find $C$.
+   \begin{align*}
+     9 &= 0 + C \implies C=9\\
+     \frac{1}{3}h^3 &= -\frac{16}{3\pi}t + 9
+   \end{align*}
+   We then substitute the condition $h=0$ to find the time $t$ when the hopper drains out.
+   \begin{align*}
+     0 &= -\frac{16}{3\pi}t + 9 \\
+     \therefore t&=\frac{27}{16}\pi \textrm{ hours}
+   \end{align*}
+ \end{answer}
 
- \2 Ignore the changes in \textbf{(a)} i.e. currently, $t = 0$ and $h = 3$. An operator wants to fill up the entire hopper with butter within 48 hours, with a net inflow of $k\textrm{ m}^3{\textrm{ per hour}}$. Find $k$.\hfill[4]
+ \2 When the butter is completely drained out, the operator allows a net inflow of $k\textrm{ m}^3{\textrm{ per hour}}$ into the hopper. State the function $H(t)$, where $H$ is the height of the butter in the hopper from time $t=0$ to when the hopper is full. \hfill[7]
+ \begin{answer}
+   The rate of change of height undergoes 3 stages: the drainage at $-$3 m$^3$ per hour, the filling of the cone and the filling of the cylinder, so $H(t)$ is a piece-wise function. Clearly, for $0 \leq t \leq \frac{27}{16}\pi$, we can use our answer from \textbf{(b)}.
+   \begin{align*}
+     \frac{1}{3}h^3 = -\frac{16}{3\pi}t + 9 \implies H(t)=\sqrt[3]{27-\frac{16t}{\pi}} \textrm{, for }0 \leq t < \frac{27\pi}{16}
+   \end{align*}
+   For the \textbf{second} stage (filling cone at $k$ m$^3$ per hour),
+   \begin{align*}
+     \frac{\mathrm{d}V}{{d}t} &= \frac{9}{16}\pi h^2\frac{\mathrm{d}h}{{d}t} = k\\
+     {h^2}\frac{{{\mathrm{d}}h}}{{{\mathrm{d}}t}} &= \frac{{16k}}{{9\pi }}\\
+     \int {h^2}\mathrm{d}h &= \int \frac{16k}{9\pi} \mathrm{d}t\\
+     \frac{1}{3}h^3 &= \frac{16kt}{9\pi}+C
+   \end{align*}
+   Subst. $t=\frac{27}{16}\pi,h=0$:
+   \begin{align*}
+     0 &= 3+C \implies C=-3\\
+     \frac{1}{3}h^3 &= \frac{16kt}{9\pi}-3
+   \end{align*}
+   To find the time taken to fill the cone, we substitute $h=4$:
+   \begin{align*}
+     \frac{1}{3}(4)^3 &= \frac{16kt}{9\pi}-3 \implies t=\frac{219\pi}{16k}\\
+     \therefore H(t)&=\sqrt[3]{\frac{16kt}{3\pi}-9} \textrm{, for }\frac{27\pi}{16} \leq t < \frac{219\pi}{16k}
+   \end{align*}
+   For the \textbf{third} stage (filling cylinder at $k$ m$^3$ per hour), we know that the height of butter in the cylinder varies linearly with time $t_{cyl}$.
+   \begin{align*}
+     V_{cyl}&=\pi(3)^2h_{cyl}\\
+     h_{cyl}&= \frac{V_{cyl}}{9\pi} = \frac{kt_{cyl}}{9\pi}
+   \end{align*}
+   To find the time taken to completely fill the cylinder, we subst. $h_{cyl}=10$ to get $t_{cyl,max}=\frac{90\pi}{k}$.
+   \begin{align*}
+     H(t) &= h_{cyl} + 4 \textrm{, for }\frac{219\pi}{16k} \leq t \leq \frac{219\pi}{16k} + \frac{90\pi}{k}\\
+     H(t) &= \frac{kt}{9\pi}+4 \textrm{, for }\frac{219\pi}{16k} \leq t \leq \frac{1659\pi}{16k}
+   \end{align*}
+   Now we just combine all three stages into one function.
+   \begin{align*}
+     \therefore H(t) &=
+        \begin{cases}
+          \sqrt[3]{27-\frac{16t}{\pi}}, &\textrm{for }  0 \leq t < \frac{27\pi}{16} \\
+          \sqrt[3]{\frac{16kt}{3\pi}-9}, &\textrm{for } \frac{27\pi}{16} \leq t < \frac{219\pi}{16k} \\
+          \frac{kt}{9\pi}+4, &\textrm{for } \frac{219\pi}{16k} \leq t \leq \frac{1659\pi}{16k}
+        \end{cases}
+   \end{align*}
+ \end{answer}
 
  \1 An art student conceptualises a design as shown below. %Question 8
  \[
@@ -347,7 +415,7 @@ pdfproducer={PDFLaTeX},%
     We are given the fact that $\dfrac{\mathrm{d}s}{\mathrm{d}t}=3t$ so we can see that $s=\frac{3}{2}t^2+C$ where $C$ is $s|_{t=0}=1$
   \end{answer}
 
-  \2 Calculate the time taken for the sphere to burst. \hfill[3]
+  \2 Calculate the time taken for the sphere to burst correct to 3 significant figures. \hfill[3]
   \begin{answer}
     We first have to express the sphere's volume, $V$ in terms of $s$ before getting the value of $t$ from our G.C.
     \begin{align*}
@@ -387,7 +455,7 @@ pdfproducer={PDFLaTeX},%
 
  \2 Show that $\dfrac{{{\textrm{d}}x}}{{{\textrm{d}}t}} = \dfrac{1}{2}(4x - 3{x^2})$\hfill[2]
  \begin{answer}
-   The change in population, $\dfrac{{{\textrm{d}}x}}{{{\textrm{d}}t}} =$ Birth Rate - Death Rate
+   The change in population, $\dfrac{{{\textrm{d}}x}}{{{\textrm{d}}t}} =$ Birth Rate $-$ Death Rate
    \begin{align*}
      \frac{{{\textrm{d}}x}}{{{\textrm{d}}t}} = 2x-1.5x^2 =\frac{1}{2}(4x - 3{x^2}) \quad\textrm{(Shown)}\quad
    \end{align*}
@@ -404,13 +472,26 @@ pdfproducer={PDFLaTeX},%
    \end{align*}
    Integrating both sides of (1):
    \begin{align*}
-     \frac{1}{4}\ln{|x|} - \frac{1}{4}\ln{|3x-4|}  &= \frac{1}{2}t + C \\
-     \ln{\frac{x}{|3x-4|}} &= 2t + C \implies C = \ln1 = 0\\
-     \ln{\left(\frac{1}{3}+\frac{4}{|3x-4|}\right)} &= 2t
+     \frac{1}{4}\ln{|x|} - \frac{1}{4}\ln{|3x-4|}  &= \frac{1}{2}t + c \\
+     \ln{\left|\frac{x}{3x-4}\right|} &= 2t + C \\
+     \left|\frac{x}{3x-4}\right| &= e^{2t+C} \\
+     \frac{x}{3x-4} &= \pm e^{2t+C} = \pm e^{C} \cdot e^{2t} \\
+     \frac{x}{3x-4} &= Ae^{2t},\textrm{ letting $A=\pm e^{C}$}
+   \end{align*}
+   We now substitute the initial condition $t=0,x=1$ to obtain the value of $A$.
+   \begin{align*}
+     \frac{1}{-1} &= A \implies A=-1\\
+     \frac{x}{3x-4} &= -e^{2t} \\
+     x &= -3xe^{2t}+4e^{2t} \\
+     x(1+3e^{2t}) &= 4e^{2t}\\
+     x &= \frac{4e^{2t}}{1+3e^{2t}} \\
+     &= \frac{4}{e^{-2t}+3}
    \end{align*}
  \end{answer}
-
-
+ \2 Hence, find the population of Martians in the long run.\hfill[2]
+ \begin{answer}
+ As $t \rightarrow \infty$, $e^{-2t} \rightarrow 0$. Therefore, $x \rightarrow \dfrac{4}{3}$, i.e. the long run population is $\dfrac{4000}{3}$ Martians.
+\end{answer}
 
 \end{outline}
 
