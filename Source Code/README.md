@@ -66,4 +66,4 @@ Here are more technical caveats:
 \end{DOSnDONTS}
 ```
 
-After finishing your code, please beautify it using ```latexindent.pl``` before committing.
+After finishing your code, please beautify it using ```latexindent.pl``` before committing. We are also using ```chktex```standards for most of our code so please try to follow that as a style guide as well.

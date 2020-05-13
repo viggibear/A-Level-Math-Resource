@@ -7,7 +7,9 @@ So far, we have questions for these topics, with more to come:
 1. Vectors
 2. Complex Numbers
 3. Functions
-4. Integration
+4. Differentiation
+5. Maclaurin's Series
+6. Integration
 
 ## Amendments
 If there are any amendments to be made, do submit a pull-request or raise an issue so that we can rectify it.
