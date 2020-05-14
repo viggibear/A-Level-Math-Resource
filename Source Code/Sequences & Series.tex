@@ -44,77 +44,126 @@ pdfproducer={PDFLaTeX},%
 
 \textbf{SEQUENCES \& SERIES [80 Marks]}
 \begin{outline}[enumerate]
-\1 A geometric progression has first term \(a=\frac{1}{2}\) and common ratio \(r\). \(S_{n}\) denotes the sum of the first \(n\) terms of the progression. %Question 1
+ \1 A geometric progression has first term \(a=\frac{1}{2}\) and common ratio \(r\). \(S_{n}\) denotes the sum of the first \(n\) terms of the progression. %Question 1
 
-  \2 Given that the ratio \(S_{\infty}:a=3:2\), find $r$. \hfill[1]
+ \2 Given that the ratio \(S_{\infty}:a=3:2\), find \(r\) \hfill[1]
+ \begin{answer}
+  Remember that the formula for \( S_\infty \) in a Geometric Progression is given by the formula \( \dfrac{a}{1-r} \) when \( |r|<1 \)
+  \begin{align*}
+   S_\infty   & = \frac{a}{1-r} = \frac{3}{2}a \\
+   \implies r & = \frac{1}{3}
+  \end{align*}
+ \end{answer}
 
-  \2 Find the least value of \(k\) such that \(S_{k}\) is more than 99\% of \(S_{\infty}\).\hfill[3]
+ \2 Find the least value of \(k\) such that \(S_{k}\) is more than 99\% of \(S_{\infty}\).\hfill[3]
+ \begin{answer}
+  \begin{align*}
+   S_k                                   & > 0.99S_\infty              \\
+   \frac{a(1-r^k)}{1-r}                  & > 0.99 \cdot \frac{3}{2}a   \\
+   \frac{1-{\frac{1}{3}}^k}{\frac{2}{3}} & > 0.99 \cdot \frac{3}{2}    \\
+   \implies {\frac{1}{3}}^k              & < 0.01                      \\
+   \implies k                            & > -\frac{\lg{0.01}}{\lg{3}} \\
+   \therefore k_{\min}                   & = 5
+  \end{align*}
+ \end{answer}
 
-\1 The sum of the first \(n\) terms of a series is given by \(S_{n}=12-12\left(\frac{5}{6}\right)^{n}\). %Question 2
+ \1 The sum of the first \(n\) terms of a series is given by \(S_{n}=12-12{\left(\frac{5}{6}\right)}^{n}\). %Question 2
 
-  \2 Find \(u_{n}\). Hence, show that the series is geometric. \hfill[2]
+ \2 Find \(u_{n}\). Hence, show that the series is geometric. \hfill[2]
+ \begin{answer}
+  Recall that the formula for \(u_n\) given \(S_n\) is \(u_n = S_n - S_{n-1} \)
+  \begin{align*}
+   S_n - S_{n-1} & = \left[12-12{\left(\frac{5}{6}\right)}^{n}\right] - \left[12-12{\left(\frac{5}{6}\right)}^{n-1}\right] \\
+                 & = 2{\left(\frac{5}{6}\right)}^{n-1}
+  \end{align*}
+  The series is a geometric progression with first term 2 and common ratio \(\frac{5}{6}\)
+ \end{answer}
 
-  \2 It is given that \(u_{1}\) and \(u_{2}\) are the third and fourth term respectively of an arithmetic progression \(v_{1},v_{2},\dots\). Find \(v_{n}\) in terms of \(n\).\hfill[3]
+ \2 It is given that \(u_{1}\) and \(u_{2}\) are the third and fourth term respectively of an arithmetic progression \(v_{1},v_{2},\dots \). Find \(v_{n}\) in terms of \(n\).\hfill[3]
+ \begin{answer}
+  \(v_3\) and \(v_4\) can be represented as \(a+2d\) and \(a+3d\) respectively where \(a\) is the first term of the AP and \(d\) is the common difference.
+  \begin{align*}
+   d            & =v_4-v_3=u_2-u_1 = 2-2\cdot\frac{5}{6} = \frac{1}{3}     \\
+   a            & = v_3 -2d = u_1 - 2d = 2-2\cdot\frac{1}{3} = \frac{4}{3} \\
+   \implies v_n & = \frac{4}{3} + \frac{1}{3}(n-1) = 1+\frac{n}{3}
+  \end{align*}
+ \end{answer}
 
-\1 A wire artist has a piece of wire of length \(L\). With one piece of wire, he can choose to make a different number of circles of different radiuses as shown: %Question 3
-\[
-\begin{tikzpicture}
-  \draw[thick] (0,0) circle (30pt);
-  \draw (0,-30pt) node[below]{One Circle};
-  \draw[thick] (90pt,0) circle (20pt);
-  \draw[thick] (130pt,0) circle (20pt);
-  \draw (110pt,-30pt) node[below]{Two Circles};
-  \draw[thick] (220pt,0) circle (15pt);
-  \draw[thick] (250pt,0) circle (15pt);
-  \draw[thick] (280pt,0) circle (15pt);
-  \draw (250pt,-30pt) node[below]{Three Circles};
-\end{tikzpicture}
-\]
-  \2 Show that the area of the circles \(A_{n}\), where \(n\) denotes the number of circles formed with the wire, does not follow a geometric progression.\hfill[3]
-
-  \2 It is given that \(B=\frac{1}{A}\). Describe the progression \(B_{1},B_{2},\dots,B_{n},\dots\).\hfill[2]
-
-\1 Equilateral triangle \(ABC\) is inscribed in circle \(ABC\) of radius \(r\) as shown in the diagram below. A circle is then inscribed in \(\Delta ABC\), and the process continues indefinitely. %Question 4
-\[
-\begin{tikzpicture}
-  \draw[thick] (0,0) circle (80pt);
-  \draw[thick] (0,80pt) node[above]{\(B\)} -- (69.282pt,-40pt) node[right]{\(C\)} -- (-69.282pt,-40pt) node[left]{\(A\)} -- cycle;
-  \draw[thick] (0,0) circle (40pt);
-  \draw[thick] (0,40pt) -- (34.641pt,-20pt) -- (-34.641pt,-20pt) -- cycle;
-  \draw[thick] (0,0) circle (20pt);
-\end{tikzpicture}
-\]
-  \2 Show that the areas of the equilateral triangles form a geometric progression. Hence, state the sum to infinity of this geometric progression. \hfill[5]
-
-  \2 An architect uses a similar design to build the tallest structure in the world constructed by cuboids stacked on top of cylinders stacked on top of cuboids and so on. Each cylindrical block is 20 storeys high and each cuboid block is 10 storeys high, where each storey is 3 metres in height. The first block, a cylinder, has a radius of 100 metres. Below is the bird's eye view of the building:
-  \[
+ \1 A wire artist has a piece of wire of length \(L\). With one piece of wire, he can choose to make a different number of circles of different radiuses as shown: %Question 3
+ \[
   \begin{tikzpicture}
-    \draw[<->] (-80pt,-90pt) -- (-40pt,-90pt)node[below]{100 metres} -- (0,-90pt);
-    \draw[dotted] (-80pt,-90pt) -- (-80pt,0);
-    \draw[dotted] (0pt,-90pt) -- (0,0);
-    \draw[thick] (0,0) circle (80pt);
-    \draw[thick] (56.5685pt,56.5685pt) -- (-56.5685pt,56.5685pt) --(-56.5685pt,-56.5685pt) -- (56.5685pt,-56.5685pt) -- cycle;
-    \draw[thick] (0,0) circle (56.5685pt);
-    \draw[thick] (40pt,40pt) -- (-40pt,40pt) --(-40pt,-40pt) -- (40pt,-40pt) -- cycle;
-    \draw[thick] (160pt,40pt) ellipse (20pt and 5pt);
-    \draw[thick] (140pt,40pt) -- (140pt,-60pt) arc (180:360:20pt and 5pt) -- (180pt,40pt);
-    \draw[thick] (210pt,40pt) rectangle (240pt,-63pt);
-    \draw[thick] (210pt,40pt) -- (220pt,50pt) -- (250pt,50pt) -- (250pt,-53pt) -- (240pt,-63pt);
-    \draw[thick] (250pt,50pt) -- (240pt,40pt);
-    \draw (160pt,-65pt) node[below]{20 Storeys};
-    \draw (230pt,-65pt) node[below]{10 Storeys};
-    \node at (0,0) {\textbullet};
+   \draw[thick] (0,0) circle (30pt);
+   \draw (0,-30pt) node[below]{One Circle};
+   \draw[thick] (90pt,0) circle (20pt);
+   \draw[thick] (130pt,0) circle (20pt);
+   \draw (110pt,-30pt) node[below]{Two Circles};
+   \draw[thick] (220pt,0) circle (15pt);
+   \draw[thick] (250pt,0) circle (15pt);
+   \draw[thick] (280pt,0) circle (15pt);
+   \draw (250pt,-30pt) node[below]{Three Circles};
   \end{tikzpicture}
-  \]
-  Due to building restrictions, the area of a block must be at least 60 m\(^2\). Find the maximum height the building can be built to.\hfill[5]
+ \]
+ \2 Show that the area of the circles \(A_{n}\), where \(n\) denotes the number of circles formed with the wire, does not follow a geometric progression.\hfill[3]
+ \begin{answer}
+  Recall that the Circumference of a circle\(=2\pi r\) and the Area of a circle\(=\pi r^2\)
+  \begin{align*}
+   L                   & = n\cdot2\pi r                                                            \\
+   A_n                 & = \pi {\left(\frac{L}{2\pi n}\right)}^2 = \frac{L^2}{4\pi n^2}            \\
+   \frac{A_n}{A_{n+1}} & = \frac{L^2/4\pi n^2}{L^2/4 \pi {(n+1)}^2}={\left(\frac{n+1}{n}\right)}^2
+  \end{align*}
+  Since \(\frac{A_n}{A_{n+1}}\) is not a constant, \(A_n\) is not a Geometric Progression.
+ \end{answer}
 
-\1 On 1 January 2020, Jill has \$100,000 in her bank account. According to her savings plan, 2\% of her savings will be credited to this same account at the end of each month. %Question 5
+ \2 It is given that \(B=\frac{1}{A}\). Describe the progression \(B_{1},B_{2},\dots,B_{n},\dots \).\hfill[2]
+ \begin{answer}
+  Let us first find \(B_n\) in terms of \(n\)
+  \begin{align*}
+   B_n = \frac{1}{A_n} = \frac{4\pi}{L^2}n^2 = {\left(\frac{2\sqrt\pi}{L}n\right)}^2
+  \end{align*}
+  The progression is the squares of an Arithmetic Progression with first term and common difference \(\frac{2\sqrt\pi}{L}\)
+ \end{answer}
 
-  \2 Given that she spends \$5000 at the start of every month including January, find the least value of \(n\) such that she cannot finance her expenses in the \(n\)th month.\hfill[3]
+ \1 Equilateral triangle \(ABC\) is inscribed in circle \(ABC\) of radius \(r\) as shown in the diagram below. A circle is then inscribed in \(\Delta ABC\), and the process continues indefinitely. %Question 4
+ \[
+  \begin{tikzpicture}
+   \draw[thick] (0,0) circle (80pt);
+   \draw[thick] (0,80pt) node[above]{\(B\)} -- (69.282pt,-40pt) node[right]{\(C\)} -- (-69.282pt,-40pt) node[left]{\(A\)} -- cycle;
+   \draw[thick] (0,0) circle (40pt);
+   \draw[thick] (0,40pt) -- (34.641pt,-20pt) -- (-34.641pt,-20pt) -- cycle;
+   \draw[thick] (0,0) circle (20pt);
+  \end{tikzpicture}
+ \]
+ \2 Show that the areas of the equilateral triangles form a geometric progression. Hence, state the sum to infinity of this geometric progression. \hfill[5]
 
-  \2 Given instead that Jill spends \$\(k\) at the start of every month including January, find the greatest value of \$\(k\) such that she can afford a \$25,000 car at the end of 2020. \hfill[4]
+ \2 An architect uses a similar design to build the tallest structure in the world constructed by cuboids stacked on top of cylinders stacked on top of cuboids and so on. Each cylindrical block is 20 storeys high and each cuboid block is 10 storeys high, where each storey is 3 metres in height. The first block, a cylinder, has a radius of 100 metres. Below is the bird's eye view of the building:
+ \[
+  \begin{tikzpicture}
+   \draw[<->] (-80pt,-90pt) -- (-40pt,-90pt)node[below]{100 metres} -- (0,-90pt);
+   \draw[dotted] (-80pt,-90pt) -- (-80pt,0);
+   \draw[dotted] (0pt,-90pt) -- (0,0);
+   \draw[thick] (0,0) circle (80pt);
+   \draw[thick] (56.5685pt,56.5685pt) -- (-56.5685pt,56.5685pt) --(-56.5685pt,-56.5685pt) -- (56.5685pt,-56.5685pt) -- cycle;
+   \draw[thick] (0,0) circle (56.5685pt);
+   \draw[thick] (40pt,40pt) -- (-40pt,40pt) --(-40pt,-40pt) -- (40pt,-40pt) -- cycle;
+   \draw[thick] (160pt,40pt) ellipse (20pt and 5pt);
+   \draw[thick] (140pt,40pt) -- (140pt,-60pt) arc (180:360:20pt and 5pt) -- (180pt,40pt);
+   \draw[thick] (210pt,40pt) rectangle (240pt,-63pt);
+   \draw[thick] (210pt,40pt) -- (220pt,50pt) -- (250pt,50pt) -- (250pt,-53pt) -- (240pt,-63pt);
+   \draw[thick] (250pt,50pt) -- (240pt,40pt);
+   \draw (160pt,-65pt) node[below]{20 Storeys};
+   \draw (230pt,-65pt) node[below]{10 Storeys};
+   \node at (0,0) {\textbullet};
+  \end{tikzpicture}
+ \]
+ Due to building restrictions, the area of a block must be at least 60 m\(^2\). Find the maximum height the building can be built to.\hfill[5]
 
-\1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January, what is the minimum value of \(r\), where \(r\)\% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2020? \hfill[5]
+ \1 On 1 January 2020, Jill has \$100,000 in her bank account. According to her savings plan, 2\% of her savings will be credited to this same account at the end of each month. %Question 5
+
+ \2 Given that she spends \$5000 at the start of every month including January, find the least value of \(n\) such that she cannot finance her expenses in the \(n\)th month.\hfill[3]
+
+ \2 Given instead that Jill spends \$ \(k\) at the start of every month including January, find the greatest value of \$ \(k\) such that she can afford a \$25,000 car at the end of 2020. \hfill[4]
+
+ \1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January, what is the minimum value of \(r\), where \(r\) \% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2020? \hfill[5]
 
 \end{outline}
 
