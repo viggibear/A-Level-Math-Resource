@@ -43,6 +43,11 @@ pdfproducer={PDFLaTeX},%
 \maketitle
 
 \textbf{SEQUENCES \& SERIES [80 Marks]}
+
+For all questions below, you may use the following standard results:
+\[
+\sum_{r=1}^{n}r = \frac{1}{2}n(n+1),\;\; \sum_{r=1}^{n}r^2=\frac{1}{6}n(n+1)(2n+1) \textrm{ and }\sum_{r=1}^{n}r^3=\frac{1}{4}n^2(n+1)^2
+\]
 \begin{outline}[enumerate]
  \1 A geometric progression has first term \(a=\frac{1}{2}\) and common ratio \(r\). \(S_{n}\) denotes the sum of the first \(n\) terms of the progression. %Question 1
 
@@ -60,8 +65,8 @@ pdfproducer={PDFLaTeX},%
   \begin{align*}
    S_k                                   & > 0.99S_\infty              \\
    \frac{a(1-r^k)}{1-r}                  & > 0.99 \cdot \frac{3}{2}a   \\
-   \frac{1-{\frac{1}{3}}^k}{\frac{2}{3}} & > 0.99 \cdot \frac{3}{2}    \\
-   \implies {\frac{1}{3}}^k              & < 0.01                      \\
+   \frac{1-{\left(\frac{1}{3}\right)}^k}{\frac{2}{3}} & > 0.99 \cdot \frac{3}{2}    \\
+   \implies {\left(\frac{1}{3}\right)}^k              & < 0.01                      \\
    \implies k                            & > -\frac{\lg{0.01}}{\lg{3}} \\
    \therefore k_{\min}                   & = 5
   \end{align*}
@@ -163,11 +168,14 @@ pdfproducer={PDFLaTeX},%
 
  \2 Given instead that Jill spends \$ \(k\) at the start of every month including January, find the greatest value of \$ \(k\) such that she can afford a \$25,000 car at the end of 2020. \hfill[4]
 
-<<<<<<< HEAD
-\1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January, what is the minimum value of \(r\), where \(r\)\% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2020? \hfill[5] %Question 6
-=======
- \1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January, what is the minimum value of \(r\), where \(r\) \% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2020? \hfill[5]
->>>>>>> 6598e53396241ee48f359485e76a71665723dc90
+ \1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January, what is the minimum value of \(r\), where \(r\) \% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2020? \hfill[5] %Question 6
+
+ \1 It is given that \(u_{r}=-\frac{1+2r}{2^{r+1}(r+1)!}\). %Question 7
+
+ \2 Show that \(u_{r}=\frac{1}{2^{r+1}(r+1)!}-\frac{1}{2^{r}(r)!}\).\hfill[2]
+
+ \2 Hence, evaluate \(\sum\limits_{r=1}^{n}u_r\) and state \(\sum\limits_{r=1}^{\infty}u_r\).\hfill[4]
+
 
 \end{outline}
 
