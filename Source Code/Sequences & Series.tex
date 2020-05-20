@@ -210,6 +210,18 @@ For all questions below, you may use the following standard results:
  \2 Find the sum of the series \(\sin{2x}+\sin{4x}+\cdots+\sin{2nx}\).\hfill[4]%Question 9
 
  \1 Evaluate \(\sum\limits_{j=1}^{N}\mathrm{e}^{\left(\sum\limits_{r=1}^{n}u_{r}\right)j}\) given that \(u_{r}=\ln{r}\).\hfill[4]%Question 10
+ \begin{answer}
+  We will first evaluate the internal sum \(j\left(\sum\limits_{r=1}^{n}u_{r}\right)\)
+  \begin{align*}
+   (\sum\limits_{r=1}^{n}u_{r})j= j\ln\prod_{r=1}^n r = j\ln{(n!)} \\
+  \end{align*}
+  We can now simplify the whole sum as shown below to get our answer. Notice that we get a geometric sum with first term and common ratio \(n! \) after our simplification.
+  \begin{align*}
+   \sum\limits_{j=1}^{N}\mathrm{e}^{\left(\sum\limits_{r=1}^{n}u_{r}\right)j} & =      \sum\limits_{j=1}^{N}\mathrm{e}^{\ln(n!) \cdot j} \\
+                                                                              & = \sum\limits_{j=1}^{N}{(n!)}^j                          \\
+                                                                              & = \frac{n![{(n!)}^N-1]}{n!-1}
+  \end{align*}
+ \end{answer}
 
 \end{outline}
 
