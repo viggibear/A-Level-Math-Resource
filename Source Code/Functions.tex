@@ -89,9 +89,9 @@ pdfproducer={PDFLaTeX},%
  \begin{answer}
   Let us make \(x\) the subject of the equation \(y=\sqrt{a^2-x^2}+k\)
   \begin{align*}
-   y       & =\sqrt{a^2-x^2}+k    \\
-   {(y-k)}^2 & = a^2-x^2            \\
-   x       & = \sqrt{a^2-{(y-k)}^2}
+   y         & =\sqrt{a^2-x^2}+k      \\
+   {(y-k)}^2 & = a^2-x^2              \\
+   x         & = \sqrt{a^2-{(y-k)}^2}
   \end{align*}
   It is evident that the equation is \emph{self-inverse} for \(a\in\mathbb{R}^+, k=0\)
  \end{answer}
@@ -242,7 +242,7 @@ pdfproducer={PDFLaTeX},%
  \begin{answer}
   By plotting the result on a G.C., we can see that \(a\) must be the \(x\)-coordinate of the minimum point of the curve. To obtain stationary points, we have to differentiate \(\textrm{f}(x)\) with respect to \(x\).
   \begin{align*}
-   \textrm{f}(x)  & =x+1+\frac{2}{x-1}                                       \\
+   \textrm{f}(x)  & =x+1+\frac{2}{x-1}                                         \\
    \textrm{f}'(x) & =1-\frac{2}{{(x-1)}^2}=0 \textrm{   for stationary points} \\
                   & \implies {(x-1)}^2=2                                       \\
                   & x=1\pm \sqrt{2}
@@ -261,7 +261,7 @@ pdfproducer={PDFLaTeX},%
   To eliminate the \(\pm \), we must find the range of values of \(y\), or \(\textrm{R}_{\textrm{f}}\). From the G.C. we know that the \(y\)-coordinate of the minimum point is the lower limit of \(\textrm{R}_{\textrm{f}}\).
   \begin{align*}
    \textrm{Substituting }x=1+\sqrt{2},\; y & =\frac{{(1+\sqrt{2})}^2+1}{1+\sqrt{2}-1} \\
-                                           & = \frac{(4+2\sqrt{2})}{\sqrt{2}}       \\
+                                           & = \frac{(4+2\sqrt{2})}{\sqrt{2}}         \\
                                            & = 2\sqrt{2}+2
   \end{align*}
   Since \(y>2\sqrt{2}+2\), \(\sqrt{y^2-4y-4}>\sqrt{{(2\sqrt{2}+2)}^2-4(2\sqrt{2}+2)-4}=0\).\\
@@ -339,7 +339,7 @@ pdfproducer={PDFLaTeX},%
   Since \(4\in [2,6)\) for which \(\textrm{f}(x)=2\sqrt{x-2}\),
   \begin{align*}
    \textrm{gf}(x) & = \textrm{g}(2\sqrt{x-2}) \\
-                  & = {(2\sqrt{x-2})}^2         \\
+                  & = {(2\sqrt{x-2})}^2       \\
                   & = 4(x-2)
   \end{align*}
   \(\therefore \textrm{gf}(4)=4(2)=8\)
@@ -398,6 +398,49 @@ pdfproducer={PDFLaTeX},%
   Since \(x>3\), \(3x+2>11\). D\(_{\textrm{g}}=(11,\infty)\) \newline
   The range of g is clearly R\(_\textrm{g}=\mathbb{R}^+\).\newline \newline
   Alternatively, one can deduce this using the fact that \(\textrm{g}(x)\) is a square root function, which means it cannot take negative values.
+ \end{answer}
+
+ \1 Decomposing \(\dfrac{12x^2+12x}{{(2x+1)}^2}\) into the form \(A + \dfrac{B}{{(2x+1)}^2}\), find a series of transformations that gives \(\dfrac{12x^2+12x}{{(2x+1)}^2}\) from \(\dfrac{3}{x^2}\)
+ \begin{answer}
+  By inspection, it is evident that \(A = \frac{12x^2}{4x^2} = 3\). Now we shall solve for \(B\)
+  \begin{align*}
+   B                                     & = 12x^2 + 12x - 3{(2x+1)}^2     \\
+                                         & = 12x^2 + 12x - 3(4x^2 + 4x -3) \\
+                                         & = -3                            \\
+   \implies \frac{12x^2+12x}{{(2x+1)}^2} & = 3-\frac{3}{{2x+1)}^2}
+  \end{align*}
+
+  We want to transform \(\frac{3}{x^2}\) into \(3 - \frac{3}{{(2x+1)}^2}\). Beginning with \(y=\frac{3}{x^2}\):\\
+  1. Reflect the graph about the y-axis
+  \begin{align*}
+   y =- \frac{3}{x^2}
+  \end{align*}
+  2. Shift the graph up by 3 units along the \(+y\)-axis: Replace \(y\) with \(y-3\)
+  \begin{align*}
+   (y-3) & = -\frac{3}{x^2}    \\
+   y     & = 3 - \frac{3}{x^2}
+  \end{align*}
+  3a. Shift the graph by 1 unit against the \(+x\)-axis: Replace \(x\) with \(x+1\)
+  \begin{align*}
+   y & = 3 - \frac{3}{{(x+1)}^2}
+  \end{align*}
+  4a. Scale the graph by \(2\times \) along the \(x\)-axis: Replace \(x\) with \(2x\)
+  \begin{align*}
+   y & = 3 - \frac{3}{{(2x+1)}^2}     \\
+     & =\dfrac{12x^2+12x}{{(2x+1)}^2}
+  \end{align*}
+  \color{red}\textbf{OR}\color{blue} \\
+  3b.  Scale the graph by \(2\times \) along the \(x\)-axis: Replace \(x\) with \(2x\)
+  \begin{align*}
+   y & = 3 - \frac{3}{{(2x)}^2}
+  \end{align*}
+  4b. Shift the graph by 0.5 unit against the \(+x\)-axis: Replace \(x\) with \(x+\frac{1}{2}\)
+  \begin{align*}
+   y & = 3 - \frac{3}{{(2(x+\frac{1}{2}))}^2} \\
+   y & = 3 - \frac{3}{{(2x+1)}^2}             \\
+     & = \dfrac{12x^2+12x}{{(2x+1)}^2}
+  \end{align*}
+
  \end{answer}
 
 \end{outline}
