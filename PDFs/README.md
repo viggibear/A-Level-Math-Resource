@@ -10,6 +10,7 @@ So far, we have questions for these topics, with more to come:
 4. Differentiation
 5. Maclaurin's Series
 6. Integration
+7. Sequences and Series (includes Arithmetic and Geometric Progressions)
 
 ## Amendments
 If there are any amendments to be made, do submit a pull-request or raise an issue so that we can rectify it.
