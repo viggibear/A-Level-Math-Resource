@@ -139,7 +139,17 @@ For all questions below, you may use the following standard results:
   \end{tikzpicture}
  \]
  \2 Show that the areas of the equilateral triangles form a geometric progression. Hence, state the sum to infinity of this geometric progression. \hfill[5]
+\begin{answer}
+  Let the length of the side of the 1st equilateral triangle be \(x_1\) and \(O\) be the centre of the diagram. We can find the area of this equilateral triangle \(A_1\) using the fact that \(\sphericalangle AOC = 120^{\circ}\) and \(A_1 = 3\cdot\frac{1}{2}r^2\sin(120^\circ)\) \\
 
+  We can now find the length of each side of the triangle, \(s_1\), since \(A_1 = \frac{1}{2}s_0^2\sin60^\circ \). We can solve for \(s_1\) by equating our two expressions for \(A_1\) to get \(s_1 = \sqrt3r\) \\
+
+  To get the radius of the inner circle, \(r_1\), we can use the fact that \(\frac{A_1}{3} = \frac{1}{2}s_1r_1\) to get \(r_1 = \frac{r}{2}\) \\
+
+  Noticing that all the equilateral triangles are similar and the fact that the radii of the circles decreases by a factor of half at each step, the length of the sides of the \(n^{\textrm{th}}\) triangle, \(s_n\), will be \(\frac{\sqrt3}{2^{n-1}}\) \\
+
+  Thus, the area of the \(n^{\textrm{th}}\) triangle, \(A_n = \frac{1}{2}s_n^2\sin{60^\circ} = \frac{3\sqrt3}{4^n}\). This is a geometric progression with first term \(\frac{3\sqrt3}{4}\) and common ratio \(\frac{1}{4} \implies S_\infty = \sqrt3\)
+\end{answer}
  \2 An architect uses a similar design to build the tallest structure in the world constructed by cuboids stacked on top of cylinders stacked on top of cuboids and so on. Each cylindrical block is 20 storeys high and each cuboid block is 10 storeys high, where each storey is 3 metres in height. The first block, a cylinder, has a radius of 100 metres. Below is the bird's eye view of the building:
  \[
   \begin{tikzpicture}
@@ -161,6 +171,15 @@ For all questions below, you may use the following standard results:
   \end{tikzpicture}
  \]
  Due to building restrictions, the area of a block must be at least 60 m\(^2\). Find the maximum height the building can be built to.\hfill[5]
+ \begin{answer}
+   The length of a square inscribed in a circle is equal to \(\frac{d}{\sqrt2}\) where \(d\) is the diameter of the circle in which the square is inscribed. The subsequent circle has the same diameter as the length of the square in which it is inscribed. \\
+
+   From this, we can glean that the area of the \(n^{\textrm{th}}\) circle, \(C_n\), can be found with the equation \(C_n = \frac{\pi\cdot200^2}{2^{n+1}}\). We can also glean that the \(n^{\textrm{th}}\) square has an area, \(S_n\), that is given by the equation \(S_n = \frac{200^2}{2^n}\). \\
+
+   We want to find out the smallest \(n\) for which either of \(C_n\) or \(S_n\) falls below 60m\(^2\) From our G.C. we get that when \(n=10\), \(S_n < 60\) so 10 circular structures and 9 square structures would have been built up to that point. \\
+
+   Thus, we can easily compute the height of the building to be 870m since we know that each cylindrical structure is \(20\times3=60\)m and each cuboidal structure is \(10\times3=30\)m in height.
+ \end{answer}
 
  \1 On 1 January 2020, Jill has \$100,000 in her bank account. According to her savings plan, 2\% of her savings will be credited to this same account at the end of each month. %Question 5
  \2 Given that she spends \$5000 at the start of every month including January, find the least value of \(n\) such that she cannot finance her expenses in the \(n\)th month.\hfill[3]
@@ -193,7 +212,19 @@ For all questions below, you may use the following standard results:
   \end{align*}
   She can spend a maximum of \$ \(k\) where \(k = 4377.78\) (to the nearest \textcent)
  \end{answer}
- \1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January, what is the minimum value of \(r\), where \(r\) \% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2020? \hfill[5] %Question 6
+ \1 On 1 January 2020, Jack has \$5,000 in his bank account. He is looking for a savings plan to maximise his savings. Given that he spends \$200 at the start of every month including January and that interest is credit at the end of each month, what is the minimum value of \(r\), where \(r\) \% is the interest rate under the savings plan, such that Jack's balance will not go below \$4,000 by the end of 2021? Leave your answer to 3 significant figures. \hfill[5] %Question 6
+ \begin{answer}
+   We will model the money left at the end of the \(n\)th month to calculate the interest rate, \(r\) given that he needs to have \$4000 left after 24 months.
+   \begin{align*}
+     \textrm{Let } m = 1+\frac{r}{100} \\
+     \textrm{Money Left after 1st Month} &= (5000-200)\cdot m \\
+     \textrm{Money Left after 2nd Month} &= [(5000-200)\cdot m - 200]\cdot m \\
+     \cdots \\
+     \textrm{Money Left after \(n\)th Month} &= 5000\cdot m^n - 200\cdot\sum_1^n{m^n} \\
+     \textrm{Money Left after 24th Month} &= 5000\cdot m^{24} - 200\cdot\frac{m(m^24-1)}{m-1} \geq 4000 \implies m \geq1.0361
+   \end{align*}
+   The minimum value of r is 3.61 (3 significant figures)
+ \end{answer}
 
  \1 It is given that \(u_{r}=ar-r^2\), where \(a>0\). Given that \(\frac{1}{2k(2k+1)}\sum\limits_{r=1}^{2k}u_{r}=-\frac{13}{6}\) and \(\sum\limits_{r=k+1}^{5}u_{r}=-8\), solve for \(a\)  and \(k\) \hfill[5] %Question 7
 
