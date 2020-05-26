@@ -1,4 +1,4 @@
-| # A-Level Math Resource
+# A-Level Math Resource
 
 Inside the Questions and Solutions folder you will find questions that are adapted from various sources and are meant to be a bit more challenging than the average Singapore GCE-'A' Level Paper. Of course, to aid your revision there are detailed worked solutions that you can use but what's the fun in just looking at the answer when you can try to get the answer right before checking it?
 
