@@ -3,7 +3,7 @@
 Inside the Questions and Solutions folder you will find questions that are adapted from various sources and are meant to be a bit more challenging than the average Singapore GCE-'A' Level Paper. Of course, to aid your revision there are detailed worked solutions that you can use but what's the fun in just looking at the answer when you can try to get the answer right before checking it?
 
 ## Topics
-So far, we have questions for these topics, with more to come:
+We have covered all the topics found in the H2 Mathematics Syllabus for the Singapore Cambridge GCE 'A' Levels under Pure Mathematics
 1. [Vectors](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Vectors.pdf) [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Vectors.pdf)
 2. [Complex Numbers](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Complex%20Numbers.pdf) [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Complex%20Numbers.pdf)
 3. [Functions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Functions.pdf) [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Functions.pdf)
