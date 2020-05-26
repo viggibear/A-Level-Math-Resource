@@ -36,13 +36,13 @@ pdfproducer={PDFLaTeX},%
 
 \newcommand{\comm}[1]{}
 \NewEnviron{answer}{\vspace{3mm} \\ \color{blue} {\BODY} \color{black}}
-% \NewEnviron{answer}{\color{blue} \comm{\BODY} \color{black}} % Use this method to hide all answers
+\NewEnviron{answer}{\color{blue} \comm{\BODY} \color{black}} % Use this method to hide all answers
 
 \begin{document}
 
 \maketitle
 
-\textbf{SEQUENCES \& SERIES [55 Marks]}
+\textbf{SEQUENCES \& SERIES [50 Marks]}
 
 For all questions below, you may use the following standard results:
 \[
@@ -221,26 +221,64 @@ For all questions below, you may use the following standard results:
      \textrm{Money Left after 2nd Month} &= [(5000-200)\cdot m - 200]\cdot m \\
      \cdots \\
      \textrm{Money Left after \(n\)th Month} &= 5000\cdot m^n - 200\cdot\sum_1^n{m^n} \\
-     \textrm{Money Left after 24th Month} &= 5000\cdot m^{24} - 200\cdot\frac{m(m^24-1)}{m-1} \geq 4000 \implies m \geq1.0361
+     \textrm{Money Left after 24th Month} &= 5000\cdot m^{24} - 200\cdot\frac{m(m^{24}-1)}{m-1} \geq 4000 \implies m \geq1.0361
    \end{align*}
    The minimum value of r is 3.61 (3 significant figures)
  \end{answer}
 
- \1 It is given that \(u_{r}=ar-r^2\), where \(a>0\). Given that \(\frac{1}{2k(2k+1)}\sum\limits_{r=1}^{2k}u_{r}=-\frac{13}{6}\) and \(\sum\limits_{r=k+1}^{5}u_{r}=-8\), solve for \(a\)  and \(k\) \hfill[5] %Question 7
-
- \1 It is given that \(u_{r}=-\frac{1+2r}{2^{r+1}(r+1)!}\). %Question 8
+ \1 It is given that \(u_{r}=-\frac{1+2r}{2^{r+1}(r+1)!}\). %Question 7
 
  \2 Show that \(u_{r}=\frac{1}{2^{r+1}(r+1)!}-\frac{1}{2^{r}(r)!}\).\hfill[2]
-
+\begin{answer}
+  \begin{align*}
+    \frac{1}{2^{r+1}(r+1)!}-\frac{1}{2^{r}(r)!} &= \frac{1}{2^{r+1}(r+1)!}-\frac{2(r+1)}{2^{r+1}(r+1)!} \\
+    &= -\frac{1+2r}{2^{r+1}(r+1)!}
+  \end{align*}
+\end{answer}
  \2 Hence, evaluate \(\sum\limits_{r=1}^{n}u_r\).\hfill[3]
-
+\begin{answer}
+  \begin{align*}
+    \sum\limits_{r=1}^{n}u_r = \sum\limits_{r=1}^{n}\left(\frac{1}{2^{r+1}(r+1)!}-\frac{1}{2^{r}(r)!}\right) &= \frac{1}{2^{1+1}(1+1)!}-\frac{1}{2^{1}(1)!} \\
+    & +\frac{1}{2^{2+1}(2+1)!}-\frac{1}{2^{2}(2)!} \\
+    & +\frac{1}{2^{3+1}(3+1)!}-\frac{1}{2^{3}(3)!} \\
+    & +\cdots \\
+    & +\frac{1}{2^{n-1}(n-1)!}-\frac{1}{2^{n-2}(n-2)!} \\
+    & +\frac{1}{2^{n}(n)!}-\frac{1}{2^{n-1}(n-1)!} \\
+    & +\frac{1}{2^{n+1}(n+1)!}-\frac{1}{2^{n}(n)!} \\
+    &= \frac{1}{2^{n+1}(n+1)!} - \frac{1}{2^{1}(1)!} \\
+    &= \frac{1}{2^{n+1}(n+1)!} - \frac{1}{2}
+  \end{align*}
+\end{answer}
  \2 Deduce the value of \(\sum\limits_{r=1}^{\infty}u_r\).\hfill[1]
-
+ \begin{answer}
+   From the result in \textbf{(b)}, we can see that as \(n \to
+   \infty \), \(\frac{1}{2^{n+1}(n+1)!} \to 0 \implies \sum\limits_{r=1}^{\infty}u_r = -\frac{1}{2}\)
+ \end{answer}
  \1
  \2 Show that \(\cos{(k+1)}x-\cos{(k-1)x}=-2\sin{kx}\sin{x}\).\hfill[1]
- \2 Find the sum of the series \(\sin{2x}+\sin{4x}+\cdots+\sin{2nx}\).\hfill[4]%Question 9
+\begin{answer}
+  From the algebraic identity \(\cos P - \cos Q = -2\sin\frac{P+Q}{2}\sin\frac{P-Q}{2}\) we know that \(\cos{(k+1)}x-\cos{(k-1)x} = -2\sin\frac{k+1+k-1}{2}\sin\frac{k+1-k+1}{2} = -2\sin{kx}\sin x\)
+\end{answer}
+ \2 Find the sum of the series \(\sin{2x}+\sin{4x}+\cdots+\sin{2nx}\).\hfill[4]%Question 8
+ \begin{answer}
+   We rearrange the above identity to get:
+   \begin{align*}
+     \sin{kx} = \frac{\cos{(k-1)x}-\cos{(k+1)x}}{2\sin x}
+   \end{align*}
+   From this, we can simplify the given series
+   \begin{align*}
+     \sin{2x}+\sin{4x}+\cdots+\sin{2nx} = \frac{1}{2\sin x}[& \cos x - \cos 3x \\
+     & +\cos 3x - \cos 5x \\
+     & +\cos5x - \cos 7x \\
+     & +\cdots \\
+     & +\cos{(2n-5)x} - \cos{(2n-3)x} \\
+     & +\cos{(2n-3)x} - \cos{(2n-1)x} \\
+     & +\cos{(2n-1)x} - \cos{(2n+1)x}] \\
+     &= \frac{\cos x - \cos{(2n+1)x}}{2\sin x}
+   \end{align*}
+ \end{answer}
 
- \1 Evaluate \(\sum\limits_{j=1}^{N}\mathrm{e}^{\left(\sum\limits_{r=1}^{n}u_{r}\right)j}\) given that \(u_{r}=\ln{r}\).\hfill[4]%Question 10
+ \1 Evaluate \(\sum\limits_{j=1}^{N}\mathrm{e}^{\left(\sum\limits_{r=1}^{n}u_{r}\right)j}\) given that \(u_{r}=\ln{r}\).\hfill[4]%Question 9
  \begin{answer}
   We will first evaluate the internal sum \(j\left(\sum\limits_{r=1}^{n}u_{r}\right)\)
   \begin{align*}
