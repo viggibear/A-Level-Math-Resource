@@ -19,3 +19,6 @@ If there are any amendments to be made, do submit a pull-request or raise an iss
 * Link to formula sheet [MF 26](https://www.seab.gov.sg/content/syllabus/alevel/2017Syllabus/ListMF26.pdf)
 * [Integral](https://www.integral-calculator.com/) and [Derivative](https://www.derivative-calculator.net/) calculators
 * [Graphing](https://www.desmos.com/calculator) Utility (Desmos)
+
+------
+By [@viggibear](github.com/viggibear) and [@dsaw99](github.com/dsaw99) 

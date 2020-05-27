@@ -36,7 +36,7 @@ pdfproducer={PDFLaTeX},%
 
 \newcommand{\comm}[1]{}
 \NewEnviron{answer}{\vspace{3mm} \\ \color{blue} {\BODY} \color{black}}
-\NewEnviron{answer}{\color{blue} \comm{\BODY} \color{black}} % Use this method to hide all answers
+% \NewEnviron{answer}{\color{blue} \comm{\BODY} \color{black}} % Use this method to hide all answers
 
 \begin{document}
 
@@ -46,7 +46,7 @@ pdfproducer={PDFLaTeX},%
 
 For all questions below, you may use the following standard results:
 \[
- \sum_{r=1}^{n}r = \frac{1}{2}n(n+1),\: \sum_{r=1}^{n}r^2=\frac{1}{6}n(n+1)(2n+1) \textrm{ and }\sum_{r=1}^{n}r^3=\frac{1}{4}n^2{(n+1)}^2
+\sum_{r=1}^{n}r^2=\frac{1}{6}n(n+1)(2n+1) \textrm{ and }\sum_{r=1}^{n}r^3=\frac{1}{4}n^2{(n+1)}^2
 \]
 \begin{outline}[enumerate]
  \1 A geometric progression has first term \(a=\frac{1}{2}\) and common ratio \(r\). \(S_{n}\) denotes the sum of the first \(n\) terms of the progression. %Question 1
@@ -226,25 +226,8 @@ For all questions below, you may use the following standard results:
    The minimum value of r is 3.61 (3 significant figures)
  \end{answer}
 
-<<<<<<< HEAD
+
  \1 It is given that \(u_{r}=-\frac{1+2r}{2^{r+1}(r+1)!}\). %Question 7
-=======
- \1 It is given that \(u_{r}=ar-r^2\), where \(a>0\). Given that \(\frac{1}{2k(2k+1)}\sum\limits_{r=1}^{2k}u_{r}=-\frac{13}{6}\) and \(\sum\limits_{r=k+1}^{5}u_{r}=-8\), solve for \(a\)  and \(k\) \hfill[5] %Question 7
-\begin{answer}
-  Notice that the sum of \(u_r\) is the combination of the sum of an arithmetic progression in \(ar + a(r+1) + a(r+2)+ \cdots \) and the combination of the sum of squares in \(-[r^2 + {(r+1)}^2 + {(r+2)}^2 + \cdots]\) \\
-\begin{align*}
-  \frac{1}{2k(2k+1)}\sum^{2k}_{r=1}u_r &= \frac{1}{2k(2k+1)}\left[a\frac{(2k)(2k+1)}{2} - \frac{2k(2k+1)(4k+1)}{6}\right] \\
-  &= \frac{a}{2} - \frac{4k+1}{6} = -\frac{13}{6} \\
-  \implies 3a-4k&=-12  \implies a = \frac{4k-12}{3} \\
-  \sum^5_{r=k+1}u_r &= \sum^5_{r=1}u_r - \sum^k_{r=1}u_r \\
-  &= \left[a\cdot\frac{5\times6}{2} - \frac{5\times6\times11}{6}\right] - \left[a\cdot\frac{k(k+1)}{2} - \frac{k(k+1)(2k+1)}{6}] \\
-  &= \left[15\cdot\frac{4k-12}{3}-55\right] - \left[\frac{4k-12}{3}\cdot\frac{k(k+1)}{2} - \frac{k(k+1)(2k+1)}{6}\right] \\
-  &= 20k-115-\frac{2k(k+1)(k-3)}{3}+\frac{k(k+1)(2k+1)}{6} \\
-  \implies
-\end{align*}
-\end{answer}
- \1 It is given that \(u_{r}=-\frac{1+2r}{2^{r+1}(r+1)!}\). %Question 8
->>>>>>> cb29362a63382aaa7615ee60a3dc1ab6510a1a94
 
  \2 Show that \(u_{r}=\frac{1}{2^{r+1}(r+1)!}-\frac{1}{2^{r}(r)!}\).\hfill[2]
 \begin{answer}
@@ -277,11 +260,7 @@ For all questions below, you may use the following standard results:
 \begin{answer}
   From the algebraic identity \(\cos P - \cos Q = -2\sin\frac{P+Q}{2}\sin\frac{P-Q}{2}\) we know that \(\cos{(k+1)}x-\cos{(k-1)x} = -2\sin\frac{k+1+k-1}{2}\sin\frac{k+1-k+1}{2} = -2\sin{kx}\sin x\)
 \end{answer}
-<<<<<<< HEAD
  \2 Find the sum of the series \(\sin{2x}+\sin{4x}+\cdots+\sin{2nx}\).\hfill[4]%Question 8
-=======
- \2 Find the sum of the series \(\sin{2x}+\sin{4x}+\cdots+\sin{2nx}\).\hfill[4]%Question 9
->>>>>>> cb29362a63382aaa7615ee60a3dc1ab6510a1a94
  \begin{answer}
    We rearrange the above identity to get:
    \begin{align*}
@@ -290,21 +269,12 @@ For all questions below, you may use the following standard results:
    From this, we can simplify the given series
    \begin{align*}
      \sin{2x}+\sin{4x}+\cdots+\sin{2nx} = \frac{1}{2\sin x}[& \cos x - \cos 3x \\
-<<<<<<< HEAD
-     & +\cos 3x - \cos 5x \\
-     & +\cos5x - \cos 7x \\
-     & +\cdots \\
-     & +\cos{(2n-5)x} - \cos{(2n-3)x} \\
-     & +\cos{(2n-3)x} - \cos{(2n-1)x} \\
-     & +\cos{(2n-1)x} - \cos{(2n+1)x}] \\
-=======
      & \cos 3x - \cos 5x \\
      & \cos5x - \cos 7x \\
      & \cdots \\
      & \cos{(2n-5)x} - \cos{(2n-3)x} \\
      & \cos{(2n-3)x} - \cos{(2n-1)x} \\
      & \cos{(2n-1)x} - \cos{(2n+1)x}] \\
->>>>>>> cb29362a63382aaa7615ee60a3dc1ab6510a1a94
      &= \frac{\cos x - \cos{(2n+1)x}}{2\sin x}
    \end{align*}
  \end{answer}
