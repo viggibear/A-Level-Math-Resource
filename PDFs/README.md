@@ -10,7 +10,7 @@ We have covered all the topics found in the H2 Mathematics Syllabus for the Sing
 4. [Sequences and Series](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Sequences%20%26%20Series.pdf) (incl. Arithmetic and Geometric Progressions) | [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Sequences%20%26%20Series.pdf)
 5. [Differentiation and its Applications](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Differentiation.pdf) | [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Differentiation.pdf)
 6. [Maclaurin's Series](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Maclaurin's%20Series.pdf) | [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Maclaurin's%20Series.pdf)
-7. [Integration](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Integration.pdf) | [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Integration.pdf)
+7. [Integration and its Applications](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Questions/Integration.pdf) | [Solutions](https://github.com/viggibear/A-Level-Math-Resource/blob/master/PDFs/Solutions/Integration.pdf)
 
 ## Amendments
 If there are any amendments to be made, do submit a pull-request or raise an issue so that we can rectify it.
@@ -21,4 +21,4 @@ If there are any amendments to be made, do submit a pull-request or raise an iss
 * [Graphing](https://www.desmos.com/calculator) Utility (Desmos)
 
 ------
-By [@viggibear](github.com/viggibear) and [@dsaw99](github.com/dsaw99) 
+By [@viggibear](github.com/viggibear) and [@dsaw99](github.com/dsaw99)
